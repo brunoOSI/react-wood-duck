@@ -1,0 +1,18 @@
+.navlink a {
+   text-decoration:none !important;
+   color: black !important;
+   display: inline-block !important;
+   &:hover {
+      color: #2974a2 !important;
+      text-decoration: underline !important;
+      background-color: #c6c8ca !important;
+   }
+} 
+
+.post-navlink-icon {
+   float: right;
+   position: absolute;
+   top: 50%;
+   right: 0;
+   transform: translateY(-50%);
+}

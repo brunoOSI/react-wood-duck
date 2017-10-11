@@ -6,6 +6,8 @@ import About from './About';
 import Accessibility from './Accessibility';
 import Colors from './Colors';
 import SideNav from './SideNav';
+import NavLink_Story from './NavLink';
+import NavLinks_Story from './NavLinks';
 //Components
 import Alert from '../src/Alert';
 import Button from '../src/Button';
@@ -22,7 +24,8 @@ import MultiSelect from '../src/MultiSelect';
 import ReactDatePicker from '../src/ReactDatePicker';
 import Table from '../src/Table';
 import TextArea from '../src/TextArea';
-
+import NavLink from '../src/NavLink';
+import NavLinks from '../src/NavLinks';
 // Style Sheets
 import 'bootstrap/dist/css/bootstrap.css';
 import '../src/styles/application.scss';
