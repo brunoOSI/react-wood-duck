@@ -18,6 +18,7 @@ describe('NavLink', function() {
    var navLinkWithPreIcon = ReactTestUtils.renderIntoDocument(<NavLink href={navLinkHref} text={navLinkText} preIcon={preIconClass} />)
    var navLinkWithPostIcon = ReactTestUtils.renderIntoDocument(<NavLink href={navLinkHref} text={navLinkText} postIcon={postIconClass} />)
    const navLinkWithPrePostIcons = ReactTestUtils.renderIntoDocument(<NavLink href={navLinkHref} text={navLinkText} preIcon={preIconClass} postIcon={postIconClass} />)
+   const navLinkWithChildren = ReactTestUtils.renderIntoDocument(<NavLink href={navLinkHref} text={navLinkText}><span>Test Child</span></NavLink>)
    it('verify basic navlink', function() {
       expect(navLinkWithoutPrePostIcons).not.toBe(null)
       expect(ReactTestUtils.isCompositeComponent(navLinkWithoutPrePostIcons, NavLink)).toBe(true)
@@ -26,7 +27,8 @@ describe('NavLink', function() {
       expect(liElementDOM).not.toBe(null)
       expect(liElement.className).toBe(navLinkClass)
       expect(liElement.children.length).toBe(1)
-      const anchorElement = ReactTestUtils.findRenderedDOMComponentWithTag(navLinkWithoutPrePostIcons, 'a')
+      const anchorElement = liElement.children[0]
+      expect(anchorElement.tagName).toBe('a'.toUpperCase())
       expect(anchorElement.textContent).toBe(navLinkText)
       expect(anchorElement.href).toContain(navLinkHref)
    })
@@ -35,29 +37,32 @@ describe('NavLink', function() {
       expect(ReactTestUtils.isCompositeComponent(navLinkWithPreIcon, NavLink)).toBe(true)
       const liElement = ReactTestUtils.findRenderedDOMComponentWithTag(navLinkWithPreIcon, 'li')
       expect(liElement.children.length).toBe(2)
-      const preIconElement = ReactTestUtils.findRenderedDOMComponentWithTag(navLinkWithPreIcon, 'i')
+      const preIconElement = liElement.children[0]
+      expect(preIconElement.tagName).toBe('i'.toUpperCase())
       expect(preIconElement.className).toBe(preIconClass)
-      expect(ReactTestUtils.findRenderedDOMComponentWithTag(navLinkWithPreIcon, 'a')).not.toBe(null) 
+      expect(liElement.children[1].tagName).toBe( 'a'.toUpperCase())
    })
 
    it('verify navlink element with post icon', function() {
       expect(ReactTestUtils.isCompositeComponent(navLinkWithPostIcon, NavLink)).toBe(true)
       const liElement = ReactTestUtils.findRenderedDOMComponentWithTag(navLinkWithPostIcon, 'li')
       expect(liElement.children.length).toBe(2)
-      const postIconElement = ReactTestUtils.findRenderedDOMComponentWithTag(navLinkWithPostIcon, 'i')
+      expect(liElement.children[0].tagName).toBe( 'a'.toUpperCase())
+      const postIconElement = liElement.children[1]
       expect(postIconElement.className).toContain(postIconClass)
-      expect(ReactTestUtils.findRenderedDOMComponentWithTag(navLinkWithPostIcon, 'a')).not.toBe(null)
    })
 
    it('verify navlink renders with pre & post icons', function() {
       expect(ReactTestUtils.isCompositeComponent(navLinkWithPrePostIcons, NavLink)).toBe(true)
       const liElement = ReactTestUtils.findRenderedDOMComponentWithTag(navLinkWithPrePostIcons, 'li')
       expect(liElement.children.length).toBe(3)
-      const preIconElement = ReactTestUtils.findRenderedDOMComponentWithClass(navLinkWithPrePostIcons, preIconClass)
+      const preIconElement = liElement.children[0]
       expect(preIconElement.tagName).toBe('i'.toUpperCase())
-      const postIconElement = ReactTestUtils.findRenderedDOMComponentWithClass(navLinkWithPrePostIcons, postIconClass)
+      expect(preIconElement.className).toBe(preIconClass)
+      expect(liElement.children[1].tagName).toBe('a'.toUpperCase())
+      const postIconElement = liElement.children[2]
       expect(postIconElement.tagName).toBe('i'.toUpperCase())
-      expect(ReactTestUtils.findRenderedDOMComponentWithTag(navLinkWithPrePostIcons, 'a')).not.toBe(null)
+      expect(postIconElement.className).toContain(postIconClass)
    })
 
    /*it('verify navlink style changes in hover state', function() {
@@ -70,4 +75,12 @@ describe('NavLink', function() {
       console.log("href class list: " + anchorElement.classList)
       console.log("href class name: " + anchorElement.className)
    })*/
+
+   it('verify navlink redners child components', function() {
+      const liElement = ReactTestUtils.findRenderedDOMComponentWithTag(navLinkWithChildren, 'li')
+      expect(liElement.children.length).toBe(2)
+      //expect(ReactTestUtils.findRenderedDOMComponentWithTag(liElement, 'a')).not.toBe(null)
+      expect(liElement.children[0].tagName).toBe('a'.toUpperCase())
+      expect(liElement.children[1].tagName).toBe('span'.toUpperCase())
+   })
 });
