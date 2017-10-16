@@ -7,7 +7,7 @@ class SideNav extends React.Component {
 		super(props);
 	}
 	render() {
-		const classField = `container bg-white col-md-${this.props.columnWidth}`;
+		const classField = `container hidden-xs col-md-${this.props.columnWidth}`;
 		if(!this.props.content || this.props.content.length == 0) {
 			return null;
 		} else {
