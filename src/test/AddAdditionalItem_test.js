@@ -1,11 +1,11 @@
 import React from 'react';
-import ListItem from '../ListItem.js';
+import AddAdditionalItem from '../AddAdditionalItem.js';
 import TestUtils from 'react-dom/lib/ReactTestUtils';
 
-describe('ListItem', function() {
+describe('AddAdditionalItem', function() {
 
     const renderedComp = TestUtils.createRenderer()
-    const compRendered = renderedComp.render(<ListItem />)
+    const compRendered = renderedComp.render(<AddAdditionalItem />)
     const resultTag = renderedComp.getRenderOutput()
 
     it('renders the tag', function() {

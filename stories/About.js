@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { storiesOf } from '@storybook/react';
+
 const About = () => (
   <main className="styleguide-content">
     <div className="container-fluid">
@@ -17,14 +19,16 @@ const About = () => (
               collaborative effort between designer and developers on Intake,
               CALS, and Case Managment. It is open source and the repository can
               be found at:{" "}
-              <a href="">https://github.com/ca-cwds/research-design</a>
+              <a href="https://github.com/ca-cwds/react-wood-duck">
+                https://github.com/ca-cwds/react-wood-duck
+              </a>
             </p>
 
             <p className="lead">Learn more about:</p>
 
             <ul>
               <li>
-                <a href="https://github.com/ca-cwds/research-design/wiki/pattern-library">
+                <a href="https://github.com/ca-cwds/research-design/wiki">
                   Pattern library vision and goals
                 </a>
               </li>
@@ -54,4 +58,4 @@ const About = () => (
   </main>
 );
 
-export default About;
+storiesOf('CWDS Asset Library', module).add('About', About);

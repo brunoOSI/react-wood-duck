@@ -1,6 +1,8 @@
 import React from 'react';
 
-const Color = () => (
+import { storiesOf } from '@storybook/react';
+
+const Colors = () => (
   <main className="styleguide-content">
     <div className="container-fluid">
       <div className="row">
@@ -366,4 +368,4 @@ const Color = () => (
   </main>
 );
 
-export default Color;
+storiesOf('Styles', module).add('Colors', Colors);

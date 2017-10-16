@@ -1,13 +1,13 @@
 {
   "name": "react-wood-duck",
-  "version": "0.1.24",
+  "version": "0.1.28",
   "description": "The CWDS component library (react-wood-duck) is for all CWDS digital service teams to contribute to and use in order to provide a consistent look, feel, and behavior for the overall CWDS application.",
   "repository": {
     "type": "git",
     "url": "https://github.com/ca-cwds/react-wood-duck.git"
   },
   "author": "Naga Pradeep Gajula",
-  "license": "MIT",
+  "license": "AGPL",
   "bugs": {
     "url": ""
   },
@@ -20,6 +20,8 @@
     "prepublish": "babel --plugins transform-es2015-modules-umd src --out-dir ./dist && node-sass src/styles/application.scss dist/styles/application.scss && node-sass src/styles/application.scss dist/styles/application.css && echo 'all dist copied.'",
     "lint": "eslint ./src",
     "lintfix": "eslint ./src --fix",
+    "lint:configtest": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
+    "prettier:check": "prettier --list-different --config ./.prettierrc \"src/**/*.js?(x)\"",
     "test": "karma start --single-run",
     "test-watch": "karma start",
     "build:dev": "webpack",
@@ -30,6 +32,7 @@
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.2.11",
+    "@storybook/addon-info": "^3.2.12",
     "@storybook/addon-links": "^3.2.10",
     "@storybook/react": "^3.2.11",
     "@storybook/storybook-deployer": "^2.0.0",
@@ -44,9 +47,18 @@
     "babel-preset-stage-2": "^6.5.0",
     "chai": "^3.5.0",
     "css-loader": "^0.28.7",
-    "eslint": "^2.7.0",
+    "eslint": "^4.8.0",
     "eslint-plugin-babel": "^3.1.0",
-    "eslint-plugin-react": "^4.2.3",
+    "eslint-config-prettier": "^2.6.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-node": "^5.2.0",
+    "eslint-plugin-prettier": "^2.3.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-react": "^7.4.0",
+    "eslint-plugin-standard": "^3.0.1",
     "file-loader": "^1.1.0",
     "jasmine": "^2.7.0",
     "jasmine-core": "^2.7.0",
@@ -59,6 +71,7 @@
     "mocha": "^2.4.5",
     "nodemon": "^1.9.1",
     "path": "^0.12.7",
+    "prettierrc": "^0.0.0-5",
     "react": "^15.0.0",
     "react-addons-test-utils": "^15.0.0",
     "react-dom": "^15.0.0",
@@ -80,6 +93,8 @@
     "copyfiles": "^1.2.0",
     "moment": "^2.18.1",
     "node-sass": "^4.5.3",
+    "prettier": "^1.7.4",
+    "prop-types": "^15.6.0",
     "react-datetime": "^2.9.0",
     "react-select": "^1.0.0-rc.5"
   }

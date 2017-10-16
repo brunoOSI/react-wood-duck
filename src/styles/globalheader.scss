@@ -17,6 +17,8 @@ header {
         color: $primary-blue;
         font-size: 16pt;
         text-align: left;
+        position: relative;
+        left: 0.6em;
     }
     ul.header-actions {
         li {
@@ -54,6 +56,8 @@ header {
             flex: 0 0 15%;
             padding: 0.313em;
             text-align: center;
+            position: relative;
+            right: -0.7em;
         }
     }
 }

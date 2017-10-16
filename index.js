@@ -5,7 +5,7 @@ var CheckboxRadioGroup = require('./dist/CheckboxRadioGroup.js').default;
 var DatePicker = require('./dist/DatePicker.js').default;
 var DropDownField = require('./dist/DropDownField.js').default;
 var InputComponent = require('./dist/InputComponent.js').default;
-var ListItem = require('./dist/ListItem.js').default;
+var AddAdditionalItem = require('./dist/AddAdditionalItem.js').default;
 var Table = require('./dist/Table.js').default;
 var TextArea = require('./dist/TextArea.js').default;
 var DateTimePicker = require('./dist/DateTimePicker.js').default;
@@ -14,6 +14,8 @@ var MultiSelect = require('./dist/MultiSelect.js').default;
 var GlobalHeader = require('./dist/GlobalHeader.js').default;
 var PageHeader = require('./dist/PageHeader.js').default;
 var SideNav = require('./dist/SideNav.js').default;
+var Layout01 = require('./dist/Layout01.js').default;
+var Layout03 = require('./dist/Layout03.js').default;
 
 module.exports = {
 	Alert,
@@ -23,7 +25,7 @@ module.exports = {
 	DatePicker,
 	DropDownField,
 	InputComponent,
-	ListItem,
+	AddAdditionalItem,
 	Table,
 	TextArea,
 	DateTimePicker,
@@ -31,5 +33,7 @@ module.exports = {
 	MultiSelect,
 	GlobalHeader,
 	PageHeader,
-	SideNav
+	SideNav,
+	Layout01,
+	Layout03
 };

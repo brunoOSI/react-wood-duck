@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import NavLinks from '../src/NavLinks';
+import NavLinks from '../../src/NavLinks';
 
 const simpleNavLinks = { type: "navLinks", navItems: [
                           {type: "navLink", text: "Tommy Cambell", href: "#", preIcon: "fa fa-user"},
@@ -38,7 +38,7 @@ const navLinksWithInnerNav = {type: "navLinks", navItems: [
                                    {type: "navLink", text: "Decision", href: "#", postIcon: "fa fa-exclamation-triangle c-red"}
                                ]};
 
-storiesOf('NavLinks', module)
+storiesOf('Components/NavLinks', module)
    .addDecorator(story => (
       <div className="container col-md-3">
         {story()}

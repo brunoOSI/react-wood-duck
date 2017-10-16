@@ -1,9 +1,9 @@
 import React from 'react';
 import { storiesOf} from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import NavLink from '../src/NavLink';
+import NavLink from '../../src/NavLink';
 
-storiesOf('NavLink', module)
+storiesOf('Components/NavLink', module)
    .addDecorator(story => (
          <div className="container col-md-3">
             <div className="row">

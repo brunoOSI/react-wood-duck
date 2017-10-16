@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { storiesOf } from '@storybook/react';
+
 const Accessibility = () => (
   <main className="styleguide-content">
     <div className="container-fluid">
@@ -266,4 +268,4 @@ const Accessibility = () => (
   </main>
 );
 
-export default Accessibility;
+storiesOf('CWDS Asset Library', module).add('Accessibility', Accessibility);

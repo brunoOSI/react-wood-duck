@@ -1,9 +1,9 @@
 import React from 'react';
 
-const ListItem = (props) => (
+const AddAdditionalItem = (props) => (
     <div className="list-item">
        {props.children}
     </div>
 );
 
-export default ListItem
+export default AddAdditionalItem

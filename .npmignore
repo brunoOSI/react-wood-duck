@@ -9,3 +9,5 @@
 npm-debug.log
 lib]
 README.md
+stories/
+.storybook/
