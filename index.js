@@ -10,6 +10,8 @@ var Table = require('./dist/Table.js').default;
 var TextArea = require('./dist/TextArea.js').default;
 var DateTimePicker = require('./dist/DateTimePicker.js').default;
 var ReactDatePicker = require('./dist/ReactDatePicker.js').default;
+var NavLink = require('./dist/NavLink.js').default;
+var NavLinks = require('./dist/NavLinks.js').default;
 var MultiSelect = require('./dist/MultiSelect.js').default;
 var GlobalHeader = require('./dist/GlobalHeader.js').default;
 var PageHeader = require('./dist/PageHeader.js').default;
@@ -31,7 +33,9 @@ module.exports = {
 	DateTimePicker,
 	ReactDatePicker,
 	MultiSelect,
-	GlobalHeader,
+	NavLink,
+        NavLinks,
+        GlobalHeader,
 	PageHeader,
 	SideNav,
 	Layout01,
