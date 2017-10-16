@@ -23,7 +23,7 @@ describe('Side Nav', function()
     it('returns side nav element given valid content', function() {
         expect(sideNavWithnavigationLinksresultTag).not.toBe(null)
         expect(sideNavWithnavigationLinksresultTag.type).toBe('div')
-        expect(sideNavWithnavigationLinksresultTag.props.className).toBe('container bg-white col-md-3')
+        expect(sideNavWithnavigationLinksresultTag.props.className).toBe('container hidden-xs col-md-3')
         expect(sideNavWithnavigationLinksresultTag.props['aria-label']).toBe('Side Nav')
     })
 
@@ -43,12 +43,12 @@ describe('Side Nav', function()
     it('returns side nav element with default column width when columnWidth is not provided', function() {
 	const componentRendered = renderer.render(<SideNav content={[{"var1": "value1"}, {"var2": "value2"}]} />)
 	const resultTag = renderer.getRenderOutput()
-	expect(resultTag.props.className).toBe('container bg-white col-md-3')
+	expect(resultTag.props.className).toContain('col-md-3')
     })
 
     it('returns side nav element with specified column width', function() {
 	const componentRendered = renderer.render(<SideNav content={[{"var1": "value1"}, {"var2": "value2"}]} columnWidth={4} />)
 	const resultTag = renderer.getRenderOutput()
-	expect(resultTag.props.className).toBe('container bg-white col-md-4')
+	expect(resultTag.props.className).toContain('col-md-4')
     })
 })
