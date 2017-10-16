@@ -11,16 +11,16 @@ class SideNav extends React.Component {
 			return null;
 		} else { 
 			return (
-	         		<div className={classField}>
-					<div className="row">
-						<span className="c-dark-blue h4"> Sample Side Nav </span>
-						<ul className="nav nav-stacked">
-							<li className="active"><a href="#">Test Item 0</a></li>
-        	       					<li><a href="#">Test Item 1</a></li>
-        	     					<li><a href="#">Test Item 2</a></li>
-		    				</ul>
-					</div>
+                           <div className={classField} aria-label="Side Nav">
+			      <div className="row">
+			         <span className="c-dark-blue h4"> Sample Side Nav </span>
+				    <ul className="nav nav-stacked">
+				       <li className="active"><a href="#">Test Item 0</a></li>
+                                       <li><a href="#">Test Item 1</a></li>
+                                       <li><a href="#">Test Item 2</a></li>
+                                    </ul>
 				</div>
+			   </div>
 			);
 		}
 	}

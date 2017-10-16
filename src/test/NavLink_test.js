@@ -1,8 +1,7 @@
 import React from 'react';
 import NavLink from '../NavLink.js';
 import ReactDOM from 'react-dom';
-import ReactTestUtils from 'react-dom/lib/ReactTestUtils';
-//import TestUtils from 'react-dom/lib/ReactTestUtils';
+import ReactTestUtils from 'react-dom/test-utils';
 
 describe('NavLink', function() {
    //var ReactTestUtils = React.addons.TestUtils
