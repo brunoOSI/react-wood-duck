@@ -2,40 +2,41 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import NavLinks from '../../src/NavLinks';
+import NavLinksContainer from '../../src/NavLinksContainer';
 
 const simpleNavLinks = { type: "navLinks", navItems: [
-                          {type: "navLink", text: "Tommy Cambell", href: "#", preIcon: "fa fa-user"},
-                          {type: "navLink", text: "Aubrey Cambell", href:"#", preIcon: "fa fa-user"},
-                          {type: "navLink", text: "Chris Cambell", href: "#", preIcon: "fa fa-user"},
+                          {type: "navLink", text: "Tommy Cambell", href: "#tom", preIcon: "fa fa-user"},
+                          {type: "navLink", text: "Aubrey Cambell", href:"#aub", preIcon: "fa fa-user"},
+                          {type: "navLink", text: "Chris Cambell", href: "#chr", preIcon: "fa fa-user"},
                        ]
                      };
 
 const singleNavLinkWithInnerNav = { type: "navLinks", navItems: [
                                    {
-                                       type: "navLinkWithInnerNav", text: "People & Roles", href:"#", navItems: [
-                                          {type: "navLink", text: "Tommy Cambell", href: "#", preIcon: "fa fa-user", postIcon: "fa fa-exclamation-triangle c-red"},
-                                          {type: "navLink", text: "Aubrey Cambell", href:"#", preIcon: "fa fa-user"},
-                                          {type: "navLink", text: "Chris Cambell", href: "#", preIcon: "fa fa-user"},
+                                       type: "navLinkWithInnerNav", text: "People & Roles", href:"#pplroles", navItems: [
+                                          {type: "navLink", text: "Tommy Cambell", href: "#tommy", preIcon: "fa fa-user", postIcon: "fa fa-exclamation-triangle c-red"},
+                                          {type: "navLink", text: "Aubrey Cambell", href:"#aubrey", preIcon: "fa fa-user"},
+                                          {type: "navLink", text: "Chris Cambell", href: "#chris", preIcon: "fa fa-user"},
                                        ]
                                     }
                                    ]
                                 };
 const navLinksWithInnerNav = {type: "navLinks", navItems: [
-                                    {type: "navLink", text: "Screener Summary", href: "#"},
-                                    {type: "navLink", text: "Allgeations & Disposition", href: "#"},
+                                    {type: "navLink", text: "Screener Summary", href: "#screenerSummary"},
+                                    {type: "navLink", text: "Allgeations & Disposition", href: "#allegations"},
                                     {
-                                       type: "navLinkWithInnerNav", text: "People & Roles", href:"#", navItems: [
-                                          {type: "navLink", text: "Tommy Cambell", href: "#", preIcon: "fa fa-user", postIcon: "fa fa-exclamation-triangle c-red"},
-                                          {type: "navLink", text: "Aubrey Cambell", href:"#", preIcon: "fa fa-user"},
-                                          {type: "navLink", text: "Chris Cambell", href: "#", preIcon: "fa fa-user"},
+                                       type: "navLinkWithInnerNav", text: "People & Roles", href:"#pplroles", navItems: [
+                                          {type: "navLink", text: "Tommy Cambell", href: "#tommy", preIcon: "fa fa-user", postIcon: "fa fa-exclamation-triangle c-red"},
+                                          {type: "navLink", text: "Aubrey Cambell", href:"#aubrey", preIcon: "fa fa-user"},
+                                          {type: "navLink", text: "Chris Cambell", href: "#chris", preIcon: "fa fa-user"}
                                        ]
                                     },
-                                   {type: "navLink", text: "History of Involvement", href: "#"},
-                                   {type: "navLink", text: "Relationships", href:"#"},
-                                   {type: "navLink", text: "Contacts", href: "#"},
-                                   {type: "navLink", text: "Risk & Safety Assessment", href: "#"},
-                                   {type: "navLink", text: "Home Assessment", href: "#"},
-                                   {type: "navLink", text: "Decision", href: "#", postIcon: "fa fa-exclamation-triangle c-red"}
+                                   {type: "navLink", text: "History of Involvement", href: "#history"},
+                                   {type: "navLink", text: "Relationships", href:"#relactionships"},
+                                   {type: "navLink", text: "Contacts", href: "#contacts"},
+                                   {type: "navLink", text: "Risk & Safety Assessment", href: "#risk"},
+                                   {type: "navLink", text: "Home Assessment", href: "#homeAssessment"},
+                                   {type: "navLink", text: "Decision", href: "#decision", postIcon: "fa fa-exclamation-triangle c-red"}
                                ]};
 
 storiesOf('Components/NavLinks', module)
@@ -45,15 +46,18 @@ storiesOf('Components/NavLinks', module)
       </div>
    ))
    .add('No Navigation links', () => (
-	<NavLinks navLinks="" />
+	<NavLinksContainer navLinks="" />
    ))
    .add('Simple Navigation links', () => (
-        <NavLinks navLinks={simpleNavLinks} />
+        <NavLinks navLinks={simpleNavLinks} handleClick={function() {return false;}}/>
    ))
    .add('Single navigation link with sub navigation links', () => (
-        <NavLinks navLinks={singleNavLinkWithInnerNav} />
+        <NavLinks navLinks={singleNavLinkWithInnerNav} handleClick={function() {return false;}}/>
    ))
    .add('List of Navigation Links with Sub navigation links ', () => (
-	<NavLinks navLinks={navLinksWithInnerNav} />
+	<NavLinks navLinks={navLinksWithInnerNav} handleClick={function() {return false;}}/>
+   ))
+   .add('With NavLinksContainer', () => (
+       <NavLinks navLinks={simpleNavLinks} handleClick={function() {return false;}}/>   
    ))
 ;
