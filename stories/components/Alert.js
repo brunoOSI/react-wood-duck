@@ -5,11 +5,7 @@ import { withInfo } from '@storybook/addon-info';
 
 import Alert from '../../src/Alert';
 
-const CenterDecorator = (storyFn) => (
-  <div className='container'>
-    { storyFn() }
-  </div>
-);
+const CenterDecorator = storyFn => <div className="container">{storyFn()}</div>;
 
 const alert = withInfo(
   `

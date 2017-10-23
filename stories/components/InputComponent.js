@@ -5,11 +5,7 @@ import { withInfo } from '@storybook/addon-info';
 
 import InputComponent from '../../src/InputComponent';
 
-const CenterDecorator = (storyFn) => (
-  <div className='container' >
-    { storyFn() }
-  </div>
-);
+const CenterDecorator = storyFn => <div className="container">{storyFn()}</div>;
 
 const InputComponentStory = withInfo(
   `
@@ -36,12 +32,12 @@ const InputComponentStory = withInfo(
         for a screen reader and the labels for fields 
         broken into segments are often not meaningful.
         `
-)(() =>(
+)(() => (
   <InputComponent
-    label='Full Name'
-    gridClassName='col-md-12 col-sm-12 col-xs-12' 
-    labelClassName='Full Name'
-    placeholder='Enter Full Name'
+    label="Full Name"
+    gridClassName="col-md-12 col-sm-12 col-xs-12"
+    labelClassName="Full Name"
+    placeholder="Enter Full Name"
   />
 ));
 

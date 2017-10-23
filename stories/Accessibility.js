@@ -22,7 +22,7 @@ const Accessibility = () => (
               </span>
             </p>
             <p className="styleguide">
-              For more detail on accessibilty standards, please see{" "}
+              For more detail on accessibilty standards, please see{' '}
               <a
                 className="styleguide"
                 href="https://www.w3.org/TR/WCAG20/"
@@ -260,7 +260,7 @@ const Accessibility = () => (
                   WebAIM
                 </a>
               </li>
-            </ul>{" "}
+            </ul>{' '}
           </div>
         </div>
       </div>

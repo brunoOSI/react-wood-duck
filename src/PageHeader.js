@@ -1,10 +1,11 @@
-import React, {Component, PropTypes} from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class PageHeader extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      stickyHeader: false
+      stickyHeader: false,
     };
     this.handleScroll = this.handleScroll.bind(this);
   }
@@ -17,32 +18,27 @@ class PageHeader extends Component {
   handleScroll(currentWindow = window, currentDocument = document) {
     var element = currentDocument.querySelector('.pageHeader');
     var pageY = window.scrollY;
-    var pageY = currentWindow.scrollY;
+    pageY = currentWindow.scrollY;
     if (pageY !== 0 && element.getBoundingClientRect().bottom > 100) {
-      this.setState({stickyHeader: true});
+      this.setState({ stickyHeader: true });
     } else if (pageY === 0) {
-      this.setState({stickyHeader: false});
+      this.setState({ stickyHeader: false });
     }
   }
   render() {
     if (this.state.stickyHeader) {
       var stickyClass = {
-        top: '0.000em'
+        top: '0.000em',
       };
     }
     return (
       <div className="container-fluid pageHeader" style={stickyClass}>
         <div className="row">
           <div className="col-xs-6">
-            <div className="page-title text-left">
-              {this.props.pageTitle}
-            </div>
+            <div className="page-title text-left">{this.props.pageTitle}</div>
           </div>
           <div className="col-xs-6">
-            <button
-              type="button"
-              role="button"
-              className="primary-btn pull-right">
+            <button type="button" className="primary-btn pull-right">
               Save Form
             </button>
           </div>
@@ -51,11 +47,11 @@ class PageHeader extends Component {
     );
   }
 }
-PageHeader.PropTypes = {
-  pageTitle: PropTypes.string
+PageHeader.propTypes = {
+  pageTitle: PropTypes.string,
 };
 PageHeader.defaultProps = {
-  pageTitle: `CaseName`
+  pageTitle: `CaseName`,
 };
 
 export default PageHeader;

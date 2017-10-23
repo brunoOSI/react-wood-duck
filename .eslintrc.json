@@ -1,31 +1,32 @@
 {
-    "extends": [
-      "standard",
-      "plugin:react/recommended",
-      "plugin:jsx-a11y/recommended",
-      "prettier",
-      "prettier/react",
-      "prettier/standard"
-    ],
-    "plugins": [
-      "react",
-      "jsx-a11y",
-      "jest",
-      "prettier",
-      "standard"
-    ],
-    "parserOptions": {
-      "sourceType": "module",
-      "ecmaFeatures": {
-        "jsx": true
-      }
-    },
-    "env": {
-      "es6": true,
-      "node": true,
-      "jest/globals": true
-    },
-    "rules": {
-      "prettier/prettier": "error"
+  "extends": [
+    "standard",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended",
+    "prettier",
+    "prettier/react",
+    "prettier/standard"
+  ],
+  "plugins": ["react", "jsx-a11y", "prettier", "standard", "jasmine"],
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
     }
+  },
+  "env": {
+    "es6": true,
+    "node": true,
+    "jasmine": true
+  },
+  "rules": {
+    "prettier/prettier": "error",
+    "jsx-a11y/label-has-for": ["error", {
+      "components": ["label"] ,
+      "required": {
+        "some" : ["nesting", "id"]
+      },
+      "allowChildren": true
+    }]
+  }
 }

@@ -6,16 +6,12 @@ import { withInfo } from '@storybook/addon-info';
 import CheckboxRadioGroup from '../../src/CheckboxRadioGroup';
 
 const styles = { paddingTop: '20px', width: '750px' };
-const CenterDecorator = (storyFn) => (
-  <div className='container' style={styles}>
-    { storyFn() }
+const CenterDecorator = storyFn => (
+  <div className="container" style={styles}>
+    {storyFn()}
   </div>
 );
-let data = [
-    'Sojourner Truth', 
-    'Frederick Douglass', 
-    'Booker T. Washington'
-];
+let data = ['Sojourner Truth', 'Frederick Douglass', 'Booker T. Washington'];
 
 const CheckboxRadioGroupStory = withInfo(
   `
@@ -94,7 +90,7 @@ const CheckboxRadioGroupStory = withInfo(
   <div>
     <CheckboxRadioGroup
       label="Characters"
-      type={"checkbox"}
+      type={'checkbox'}
       name="Category"
       options={data}
       selectedOptions={[]}
@@ -102,7 +98,7 @@ const CheckboxRadioGroupStory = withInfo(
     />
     <CheckboxRadioGroup
       label="Characters"
-      type={"radio"}
+      type={'radio'}
       name="Category"
       options={data}
       selectedOptions={[]}

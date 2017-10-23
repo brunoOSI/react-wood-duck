@@ -1,29 +1,35 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const TextArea = (props) => (
-    <div className="form-group">
-        <div className={props.gridClassName}>
-            <label className="form-label">{props.label}</label>
-            <textarea
-                className={props.labelClassName}
-                style={props.resize ? null : {resize: 'none'}}
-                name={props.name}
-                rows={props.rows}
-                value={props.value}
-                onChange={props.handleOnChange}
-                placeholder={props.placeholder} />
-        </div>
+const TextArea = props => (
+  <div className="form-group">
+    <div className={props.gridClassName}>
+      <label className="form-label" htmlFor={props.name}>
+        {props.label}
+        <textarea
+          className={props.labelClassName}
+          style={props.resize ? null : { resize: 'none' }}
+          name={props.name}
+          rows={props.rows}
+          value={props.value}
+          onChange={props.handleOnChange}
+          placeholder={props.placeholder}
+        />
+      </label>
     </div>
+  </div>
 );
 
 TextArea.propTypes = {
-    label: React.PropTypes.string.isRequired,
-    rows: React.PropTypes.number.isRequired,
-    name: React.PropTypes.string.isRequired,
-    value: React.PropTypes.string.isRequired,
-    resize: React.PropTypes.bool,
-    placeholder: React.PropTypes.string,
-    handleOnChange: React.PropTypes.func.isRequired
+  gridClassName: PropTypes.string,
+  labelClassName: PropTypes.string,
+  label: PropTypes.string.isRequired,
+  rows: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  resize: PropTypes.bool,
+  placeholder: PropTypes.string,
+  handleOnChange: PropTypes.func.isRequired,
 };
 
 export default TextArea;

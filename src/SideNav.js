@@ -24,14 +24,14 @@ class SideNav extends React.Component {
 	}
 }
 
-SideNav.PropTypes = {
-	content: PropTypes.string,
-	columnWidth: PropTypes.number
-}
+SideNav.propTypes = {
+  content: PropTypes.string,
+  columnWidth: PropTypes.number,
+};
 
 SideNav.defaultProps = {
-	content: "",
-	columnWidth: 3
-}
+  content: '',
+  columnWidth: 3,
+};
 
 export default SideNav;

@@ -1,9 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const AddAdditionalItem = (props) => (
-    <div className="list-item">
-       {props.children}
-    </div>
+const AddAdditionalItem = props => (
+  <div className="list-item">{props.children}</div>
 );
 
-export default AddAdditionalItem
+AddAdditionalItem.propTypes = {
+  children: PropTypes,
+};
+
+export default AddAdditionalItem;

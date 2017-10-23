@@ -4,11 +4,11 @@ import TestUtils from 'react-dom/lib/ReactTestUtils';
 
 describe('PageHeader', function() {
   var input = {
-    pageTitle: 'testPageTitle'
+    pageTitle: 'testPageTitle',
   };
-  const renderedComp = TestUtils.createRenderer();
-  const compRendered = renderedComp.render(<PageHeader />);
-  const resultTag = renderedComp.getRenderOutput();
+  const renderedComponent = TestUtils.createRenderer();
+  renderedComponent.render(<PageHeader />);
+  const resultTag = renderedComponent.getRenderOutput();
   const pageHeader = TestUtils.renderIntoDocument(<PageHeader />);
   const pageHeaderwithProps = TestUtils.renderIntoDocument(
     <PageHeader {...input} />
@@ -71,16 +71,16 @@ describe('PageHeader', function() {
   describe('#handleScroll', () => {
     describe('with scrolling', () => {
       it('sets stickyHeader to true', () => {
-        const currentWindow = {scrollY: 2};
+        const currentWindow = { scrollY: 2 };
         const element = {
           getBoundingClientRect: () => {
-            return {bottom: 101};
-          }
+            return { bottom: 101 };
+          },
         };
         const currentDocument = {
           querySelector: () => {
             return element;
-          }
+          },
         };
         pageHeaderwithProps.handleScroll(currentWindow, currentDocument);
         expect(pageHeaderwithProps.state.stickyHeader).toEqual(true);
@@ -89,16 +89,16 @@ describe('PageHeader', function() {
 
     describe('not scrolled', () => {
       it('sets stickyHeader to false', () => {
-        const currentWindow = {scrollY: 0};
+        const currentWindow = { scrollY: 0 };
         const element = {
           getBoundingClientRect: () => {
-            return {bottom: 101};
-          }
+            return { bottom: 101 };
+          },
         };
         const currentDocument = {
           querySelector: () => {
             return element;
-          }
+          },
         };
         pageHeaderwithProps.handleScroll(currentWindow, currentDocument);
         expect(pageHeaderwithProps.state.stickyHeader).toEqual(false);
@@ -107,16 +107,16 @@ describe('PageHeader', function() {
 
     describe('less than 100 pixels from bottom ', () => {
       it('sets stickyHeader to false', () => {
-        const currentWindow = {scrollY: 11};
+        const currentWindow = { scrollY: 11 };
         const element = {
           getBoundingClientRect: () => {
-            return {bottom: 99};
-          }
+            return { bottom: 99 };
+          },
         };
         const currentDocument = {
           querySelector: () => {
             return element;
-          }
+          },
         };
         pageHeaderwithProps.handleScroll(currentWindow, currentDocument);
         expect(pageHeaderwithProps.state.stickyHeader).toEqual(false);
@@ -128,7 +128,7 @@ describe('PageHeader', function() {
     describe('with stickyHeader', () => {
       it('adds a 0.000em style', () => {
         let component = TestUtils.renderIntoDocument(<PageHeader />);
-        component.setState({stickyHeader: true});
+        component.setState({ stickyHeader: true });
         const pageHeaderElement = TestUtils.findRenderedDOMComponentWithClass(
           component,
           'pageHeader'

@@ -18,7 +18,7 @@ const About = () => (
               to have a component-based library. This is a cross team
               collaborative effort between designer and developers on Intake,
               CALS, and Case Managment. It is open source and the repository can
-              be found at:{" "}
+              be found at:{' '}
               <a href="https://github.com/ca-cwds/react-wood-duck">
                 https://github.com/ca-cwds/react-wood-duck
               </a>
@@ -35,19 +35,19 @@ const About = () => (
               <li>
                 <a href="https://github.com/ca-cwds/research-design/wiki/Experience-Values">
                   User Experience Values
-                </a>{" "}
+                </a>{' '}
                 we design to.
               </li>
               <li>
                 <a href="https://github.com/ca-cwds/research-design/wiki/Accessible-Design">
                   Accessibilty Standards
-                </a>{" "}
+                </a>{' '}
                 we follow.
               </li>
               <li>
                 <a href="https://github.com/ca-cwds/research-design/wiki/Technical-Design-Brief">
                   Browsers and screens
-                </a>{" "}
+                </a>{' '}
                 we support.
               </li>
             </ul>

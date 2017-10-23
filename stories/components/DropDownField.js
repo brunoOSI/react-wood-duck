@@ -5,16 +5,8 @@ import { withInfo } from '@storybook/addon-info';
 
 import DropDownField from '../../src/DropDownField';
 
-const CenterDecorator = (storyFn) => (
-  <div className='container' >
-    { storyFn() }
-  </div>
-);
-let data = [
-    'Sojourner Truth', 
-    'Frederick Douglass', 
-    'Booker T. Washington'
-];
+const CenterDecorator = storyFn => <div className="container">{storyFn()}</div>;
+let data = ['Sojourner Truth', 'Frederick Douglass', 'Booker T. Washington'];
 
 const DropDownFieldStory = withInfo(
   `
@@ -49,8 +41,8 @@ const DropDownFieldStory = withInfo(
   `
 )(() => (
   <DropDownField
-    label='Select'
-    gridClassName='col-md-12 col-sm-12 col-xs-12'
+    label="Select"
+    gridClassName="col-md-12 col-sm-12 col-xs-12"
     name="Characters"
     options={data}
     selectedOption=""

@@ -3,16 +3,15 @@ import Table from '../Table.js';
 import TestUtils from 'react-dom/lib/ReactTestUtils';
 
 describe('Table', function() {
+  const renderedComponent = TestUtils.createRenderer();
+  renderedComponent.render(<Table />);
+  const resultTag = renderedComponent.getRenderOutput();
 
-    const renderedComp = TestUtils.createRenderer()
-    const compRendered = renderedComp.render(<Table />)
-    const resultTag = renderedComp.getRenderOutput()
+  it('renders the tag', function() {
+    expect(resultTag.type).toBe('table');
+  });
 
-    it('renders the tag', function() {
-        expect(resultTag.type).toBe('table')
-    })
-
-    it('verify the className', function() {
-        expect(resultTag.props.className). toBe('table table-hover table-striped')
-    })
-})
+  it('verify the className', function() {
+    expect(resultTag.props.className).toBe('table table-hover table-striped');
+  });
+});

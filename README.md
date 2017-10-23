@@ -104,7 +104,15 @@ run command:
 	npm run prepublish
 	
 **NOTE:** when you run this, it compiles the **"src"** code and generates the transpiled CommonJS in **“dist”** folder within your local machine 
-        
+
+### Writing test cases Using Enzyme
+Add these following imports in your test cases for the components
+
+	import React from 'react';
+	import { shallow, mount, render } from 'enzyme';
+	import Enzyme_setup from './Enzyme_setup';
+	import ComponentName from '../Component.js';
+
 ### Push to git
 
 Commit the changes and push to GitHub:

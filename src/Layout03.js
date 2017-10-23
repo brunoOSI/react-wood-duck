@@ -5,18 +5,15 @@ import PageHeader from './PageHeader.js';
 import SideNav from './SideNav.js';
 
 class Layout03 extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
       <div>
         <GlobalHeader/>
         <PageHeader/>
         <SideNav content={[{ type: "navLinks", navItems: [
-                          {type: "navLink", text: "Tommy Cambell", href: "#", preIcon: "fa fa-user"},
-                          {type: "navLink", text: "Aubrey Cambell", href:"#", preIcon: "fa fa-user"},
-                          {type: "navLink", text: "Chris Cambell", href: "#", preIcon: "fa fa-user"},
+                          {type: "navLink", text: "Tommy Cambell", href: "#tom", preIcon: "fa fa-user"},
+                          {type: "navLink", text: "Aubrey Cambell", href:"#aub", preIcon: "fa fa-user"},
+                          {type: "navLink", text: "Chris Cambell", href: "#chris", preIcon: "fa fa-user"},
                        ]
                      }]}/>
           <div>
@@ -26,10 +23,6 @@ class Layout03 extends React.Component {
     );
   }
 }
-Layout03.PropTypes = {
-
-};
-Layout03.defaultProps = {
-  
-};
+Layout03.propTypes = { children: PropTypes };
+Layout03.defaultProps = {};
 export default Layout03;

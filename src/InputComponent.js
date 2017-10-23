@@ -1,38 +1,60 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
+const InputComponent = props => {
+  let errorMessage = '';
+  if (props.required || props.validationError) {
+    errorMessage = props.validationErrorMessage;
+  }
 
-/* Attached Prop fields
-* gridClassName, fieldClassName,labelClassName, id, label, onChange,
-* value,placeholder, type, serverError, serverErrorMessage, validationError,validationErrorMessage, required
-*
-* */
+  if (props.serverError) {
+    errorMessage = props.serverErrorMessage;
+  }
 
+  return (
+    <div className="form-group">
+      <div
+        className={`${props.gridClassName}${props.serverError ||
+        props.validationError ||
+        props.required
+          ? ' has-error '
+          : ''}`}
+      >
+        <label className={props.labelClassName} htmlFor={props.id}>
+          {props.label}
+          <input
+            className={props.fieldClassName}
+            id={props.id}
+            type={props.type}
+            placeholder={props.placeholder}
+            value={props.value}
+            onChange={props.onChange}
+          />
+        </label>
+        {errorMessage !== '' ? (
+          <span className="error text-danger">{errorMessage}</span>
+        ) : (
+          ''
+        )}
+      </div>
+    </div>
+  );
+};
 
-const InputComponent = (props) => {
-
-    let errorMessage = '';
-    if (props.required || props.validationError) {
-        errorMessage = props.validationErrorMessage;
-    }
-
-    if (props.serverError) {
-        errorMessage = props.serverErrorMessage;
-    }
-
-    return (
-        <div className="form-group">
-            <div className={`${props.gridClassName}${(props.serverError || props.validationError || props.required) ? ' has-error ' : ''}`}>
-                <label className={props.labelClassName} htmlFor={props.id}>{props.label}</label>
-                <input className={props.fieldClassName}
-                       id={props.id} type={props.type} placeholder={props.placeholder}
-                       value={props.value} onChange={props.onChange}
-                />
-                { errorMessage !== '' ? <span className="error text-danger">{errorMessage}</span> : '' }
-
-            </div>
-        </div>
-    );
-}
-
+InputComponent.propTypes = {
+  id: PropTypes.number,
+  labelClassName: PropTypes.string,
+  required: PropTypes.bool,
+  validationError: PropTypes.bool,
+  validationErrorMessage: PropTypes.string,
+  gridClassName: PropTypes.string,
+  fieldClassName: PropTypes.string,
+  serverError: PropTypes.bool,
+  serverErrorMessage: PropTypes.string,
+  label: PropTypes.string,
+  type: PropTypes.any,
+  placeholder: PropTypes.string,
+  value: PropTypes.any,
+  onChange: PropTypes.func,
+};
 export default InputComponent;
-

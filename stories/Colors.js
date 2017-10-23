@@ -306,24 +306,38 @@ const Colors = () => (
                     <td className="c-red bg-white">$white</td>
                   </tr>
                   <tr>
-                    <td className="c-medium-blue bg-white-smoke">$medium-blue</td>
-                    <td className="c-medium-blue bg-white-smoke">$white-smoke</td>
+                    <td className="c-medium-blue bg-white-smoke">
+                      $medium-blue
+                    </td>
+                    <td className="c-medium-blue bg-white-smoke">
+                      $white-smoke
+                    </td>
                   </tr>
                   <tr>
                     <td className="c-dark-grey bg-white-smoke">$dark-grey</td>
                     <td className="c-dark-grey bg-white-smoke">$white-smoke</td>
                   </tr>
                   <tr>
-                    <td className="c-darkest-grey bg-white-smoke">$darkest-grey</td>
-                    <td className="c-darkest-grey bg-white-smoke">$white-smoke</td>
+                    <td className="c-darkest-grey bg-white-smoke">
+                      $darkest-grey
+                    </td>
+                    <td className="c-darkest-grey bg-white-smoke">
+                      $white-smoke
+                    </td>
                   </tr>
                   <tr>
-                    <td className="c-medium-green bg-white-smoke">$medium-green</td>
-                    <td className="c-medium-green bg-white-smoke">$white-smoke</td>
+                    <td className="c-medium-green bg-white-smoke">
+                      $medium-green
+                    </td>
+                    <td className="c-medium-green bg-white-smoke">
+                      $white-smoke
+                    </td>
                   </tr>
                   <tr>
                     <td className="c-dark-green bg-white-smoke">$dark-green</td>
-                    <td className="c-dark-green bg-white-smoke">$white-smoke</td>
+                    <td className="c-dark-green bg-white-smoke">
+                      $white-smoke
+                    </td>
                   </tr>
                   <tr>
                     <td className="c-red bg-white-smoke">$red</td>
