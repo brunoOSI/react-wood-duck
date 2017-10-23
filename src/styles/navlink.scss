@@ -8,6 +8,13 @@
          text-decoration: underline !important;
          background-color: transparent !important;
       }
+    }
+    a.active {
+        font-weight: bold !important;
+        text-decoration:none !important;
+        color: black !important;
+        box-shadow: none !important;
+        border-color: transparent !important;
    }
 } 
 

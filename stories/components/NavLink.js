@@ -16,6 +16,9 @@ storiesOf('Components/NavLink', module)
    .add('Default', () => (
       <NavLink href="test.html" text="Nav Link" />      
    ))
+   .add('Active NavLink', () => (
+      <NavLink href="test.html" text="Nav Link" active={true} />
+   ))
    .add('With Pre Icon', () => (
       <NavLink href="test.html" text="Nav Link" preIcon="fa fa-user" />
    ))
