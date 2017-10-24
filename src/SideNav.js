@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import NavLinksContainer from './NavLinksContainer';
 
 class SideNav extends React.Component {
-
   render() {
     const classField = `container hidden-xs col-md-${this.props
       .columnWidth} side-nav`;

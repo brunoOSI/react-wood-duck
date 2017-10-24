@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 class NavLink extends React.Component {
-
   render() {
     console.debug('nav link props: ' + this.props.active);
     const preIcon = this.props.preIcon ? (
