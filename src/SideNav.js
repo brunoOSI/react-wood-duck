@@ -3,20 +3,18 @@ import PropTypes from 'prop-types';
 import NavLinksContainer from './NavLinksContainer';
 
 class SideNav extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+
   render() {
     const classField = `container hidden-xs col-md-${this.props
       .columnWidth} side-nav`;
-    if (!this.props.content || this.props.content.length == 0) {
+    if (!this.props.content || this.props.content.length === 0) {
       return null;
     } else {
       const sideNavComponents = this.props.content.map(function(
         sideNavItem,
         index
       ) {
-        if (sideNavItem.type == 'navLinks')
+        if (sideNavItem.type === 'navLinks')
           return (
             <div
               className="row"

@@ -3,9 +3,6 @@ import PropTypes from 'prop-types';
 import NavLink from './NavLink';
 
 class NavLinks extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     console.debug(this.props.navLinks);

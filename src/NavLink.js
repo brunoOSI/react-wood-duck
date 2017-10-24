@@ -2,9 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 class NavLink extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     console.debug('nav link props: ' + this.props.active);
@@ -45,13 +42,15 @@ NavLink.PropTypes = {
   preIcon: PropTypes.string,
   postIcon: PropTypes.string,
   active: PropTypes.boolean,
+  handleClick: PropTypes.func,
   indentationLevel: PropTypes.number,
 };
 
-NavLink.PropTypes = {
+NavLink.defaultProps = {
   preIcon: '',
   postIcon: '',
   active: false,
+  handleClick: null,
   indentationLevel: 0,
 };
 
