@@ -1,10 +1,8 @@
 import React from 'react';
 import NavLink from '../NavLink.js';
-import ReactDOM from 'react-dom';
 import ReactTestUtils from 'react-dom/test-utils';
 
 describe('NavLink', function() {
-  // var ReactTestUtils = React.addons.TestUtils
   const navLinkHref = 'test.html';
   const navLinkText = 'Nav Link Test';
   const navLinkClass = 'navlink';
@@ -84,10 +82,7 @@ describe('NavLink', function() {
       inactiveBasicNavLink,
       'li'
     );
-    const spanElement = ReactTestUtils.findRenderedDOMComponentWithTag(
-      inactiveBasicNavLink,
-      'span'
-    );
+    const spanElement = liElement.children[0];
     expect(spanElement).not.toBe(null);
     expect(spanElement.className).toBe(inactiveNavLinkClassName);
     expect(spanElement.style.cssText).toBe('margin-right: 6rem;');

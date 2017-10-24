@@ -54,6 +54,7 @@ NavLinks.PropTypes = {
 
 NavLinks.defaultProps = {
   indentationLevel: 0,
+  activeNavLinkHref: '',
 };
 
 export default NavLinks;

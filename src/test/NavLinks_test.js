@@ -107,8 +107,9 @@ describe('NavLinks', function() {
         handleClick={clickHandler}
         active={true}
         indentationLevel={0}
-        children={null}
-      />,
+      >
+        {null}
+      </NavLink>,
       <NavLink
         key={simpleNavLinks.navItems[1].text}
         text={simpleNavLinks.navItems[1].text}
@@ -118,8 +119,9 @@ describe('NavLinks', function() {
         handleClick={clickHandler}
         active={false}
         indentationLevel={0}
-        children={null}
-      />,
+      >
+        {null}
+      </NavLink>,
     ]);
   });
 
@@ -136,8 +138,9 @@ describe('NavLinks', function() {
         handleClick={clickHandler}
         active={true}
         indentationLevel={0}
-        children={null}
-      />,
+      >
+        {null}
+      </NavLink>,
       <NavLink
         key={navLinksWithSubNavLinks.navItems[1].text}
         text={navLinksWithSubNavLinks.navItems[1].text}

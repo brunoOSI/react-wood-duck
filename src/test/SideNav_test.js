@@ -30,12 +30,15 @@ describe('Side Nav', function() {
     },
   ];
   const renderer = TestUtils.createRenderer();
-  const sideNavWithNavigationLinksRendered = renderer.render(
-    <SideNav content={simpleNavLinks} />
-  );
-  const sideNavWithnavigationLinksresultTag = renderer.getRenderOutput();
+  var sideNavWithnavigationLinksresultTag = null;
+
+  beforeEach(function() {
+    renderer.render(<SideNav content={simpleNavLinks} />);
+    sideNavWithnavigationLinksresultTag = renderer.getRenderOutput();
+  });
+
   it('returns null when content is empty', function() {
-    const componentRendered = renderer.render(<SideNav />);
+    renderer.render(<SideNav />);
     const resultTag = renderer.getRenderOutput();
     expect(resultTag).toBe(null);
   });
@@ -82,7 +85,7 @@ describe('Side Nav', function() {
   });
 
   it('returns side nav element with default column width when columnWidth is not provided', function() {
-    const componentRendered = renderer.render(
+    renderer.render(
       <SideNav content={[{ var1: 'value1' }, { var2: 'value2' }]} />
     );
     const resultTag = renderer.getRenderOutput();
@@ -90,7 +93,7 @@ describe('Side Nav', function() {
   });
 
   it('returns side nav element with specified column width', function() {
-    const componentRendered = renderer.render(
+    renderer.render(
       <SideNav
         content={[{ var1: 'value1' }, { var2: 'value2' }]}
         columnWidth={4}

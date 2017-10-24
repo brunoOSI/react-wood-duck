@@ -1,5 +1,5 @@
 import React from 'react';
-import NavLink from './NavLink';
+import PropTypes from 'prop-types';
 import NavLinks from './NavLinks';
 
 class NavLinksContainer extends React.Component {
@@ -33,5 +33,9 @@ class NavLinksContainer extends React.Component {
     );
   }
 }
+
+NavLinksContainer.PropTypes = {
+  navLinks: PropTypes.string.isRequired,
+};
 
 export default NavLinksContainer;
