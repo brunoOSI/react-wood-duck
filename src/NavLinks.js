@@ -45,8 +45,8 @@ class NavLinks extends React.Component {
   }
 }
 
-NavLinks.PropTypes = {
-  navLinks: PropTypes.string.isRequired,
+NavLinks.propTypes = {
+  navLinks: PropTypes.object.isRequired,
   indentationLevel: PropTypes.number,
   activeNavLinkHref: PropTypes.string,
   handleClick: PropTypes.func,

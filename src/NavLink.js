@@ -35,14 +35,15 @@ class NavLink extends React.Component {
   }
 }
 
-NavLink.PropTypes = {
-  href: PropTypes.string.isRequired,
+NavLink.propTypes = {
   text: PropTypes.string.isRequired,
+  href: PropTypes.string.isRequired,
   preIcon: PropTypes.string,
   postIcon: PropTypes.string,
-  active: PropTypes.boolean,
+  active: PropTypes.bool,
   handleClick: PropTypes.func,
   indentationLevel: PropTypes.number,
+  children: PropTypes.node,
 };
 
 NavLink.defaultProps = {
@@ -51,6 +52,7 @@ NavLink.defaultProps = {
   active: false,
   handleClick: null,
   indentationLevel: 0,
+  children: null,
 };
 
 export default NavLink;

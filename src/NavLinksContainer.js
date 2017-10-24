@@ -34,8 +34,8 @@ class NavLinksContainer extends React.Component {
   }
 }
 
-NavLinksContainer.PropTypes = {
-  navLinks: PropTypes.string.isRequired,
+NavLinksContainer.propTypes = {
+  navLinks: PropTypes.object.isRequired,
 };
 
 export default NavLinksContainer;
