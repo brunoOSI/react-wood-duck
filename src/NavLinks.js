@@ -46,9 +46,13 @@ class NavLinks extends React.Component {
 }
 
 NavLinks.propTypes = {
+  /** List describing navigation links to be rendered */
   navLinks: PropTypes.object.isRequired,
+  /** Indentation Level of navigation links. Useful for nested navigation links */
   indentationLevel: PropTypes.number,
+  /** Indicates Href of currently active navlink */
   activeNavLinkHref: PropTypes.string,
+  /** Call back function for each navigation link */
   handleClick: PropTypes.func,
 };
 

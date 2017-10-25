@@ -36,13 +36,21 @@ class NavLink extends React.Component {
 }
 
 NavLink.propTypes = {
+  /** NavLink Text  */
   text: PropTypes.string.isRequired,
+  /** NavLink Href */
   href: PropTypes.string.isRequired,
+  /** Pre Icon css class name(s) */
   preIcon: PropTypes.string,
+  /** Post Icon css class name(s) */
   postIcon: PropTypes.string,
+  /** Indicates if current NavLink is actively selected */
   active: PropTypes.bool,
+  /** Hyperlink On Click Handler */
   handleClick: PropTypes.func,
+  /** It is used to align nested Navigation links */
   indentationLevel: PropTypes.number,
+  /** This property is used to display nested elements under NavLink  */
   children: PropTypes.node,
 };
 
