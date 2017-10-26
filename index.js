@@ -12,6 +12,7 @@ var DateTimePicker = require('./dist/DateTimePicker.js').default;
 var ReactDatePicker = require('./dist/ReactDatePicker.js').default;
 var NavLink = require('./dist/NavLink.js').default;
 var NavLinks = require('./dist/NavLinks.js').default;
+var NavLinksContainer = require('./dist/NavLinksContainer.js').default;
 var MultiSelect = require('./dist/MultiSelect.js').default;
 var GlobalHeader = require('./dist/GlobalHeader.js').default;
 var PageHeader = require('./dist/PageHeader.js').default;
