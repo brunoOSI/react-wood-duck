@@ -20,14 +20,14 @@ const basicNavLinksUsage =
 
         - navLinks.navItems array has type 'navLinkWithInnerNav' elements to render an inner nav. It could look like below.
               <pre><code style=${codeStyle}>
-              {
-                  type: "navLinkWithInnerNav", text: "People & Roles", href:"#pplroles", navItems: [
-                      {type: "navLink", text: "Tommy Cambell", href: "#tommy", preIcon: "fa fa-user", postIcon: "fa fa-exclamation-triangle c-red"},
-                      {type: "navLink", text: "Aubrey Cambell", href:"#aubrey", preIcon: "fa fa-user"},
-                      {type: "navLink", text: "Chris Cambell", href: "#chris", preIcon: "fa fa-user"}
-                  ]
-              }
-             </code></pre>
+                 {
+                     type: "navLinkWithInnerNav", text: "People & Roles", href:"#pplroles", navItems: [
+                         {type: "navLink", text: "Tommy Cambell", href: "#tommy", preIcon: "fa fa-user", postIcon: "fa fa-exclamation-triangle c-red"},
+                         {type: "navLink", text: "Aubrey Cambell", href:"#aubrey", preIcon: "fa fa-user"},
+                         {type: "navLink", text: "Chris Cambell", href: "#chris", preIcon: "fa fa-user"}
+                     ]
+                 }
+              </code></pre>
 
     ###### Accessibility
         - Surround NavLinks component with <div role="navigation"> or <nav>.
