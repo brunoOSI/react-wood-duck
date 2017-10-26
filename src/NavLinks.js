@@ -4,13 +4,11 @@ import NavLink from './NavLink';
 
 class NavLinks extends React.Component {
   render() {
-    console.debug(this.props.navLinks);
     if (
       !this.props.navLinks ||
       !this.props.navLinks.navItems ||
       this.props.navLinks.navItems.length === 0
     ) {
-      console.warn('No NavLinks found to render in ' + this.props.navLinks);
       return null;
     }
     const navLinksComponentsList = this.props.navLinks.navItems.map(function(

@@ -18,12 +18,10 @@ class NavLinksContainer extends React.Component {
   }
 
   handleNavLinkClick(href, e) {
-    console.trace('href: ' + href + ', event: ' + e);
     this.setState({ activeNavLinkHref: href });
   }
 
   render() {
-    console.log('inside nv container render : ' + this.props.navLinks);
     return (
       <NavLinks
         navLinks={this.props.navLinks}

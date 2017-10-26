@@ -22,14 +22,14 @@ const navLinksWithInnerNav = {type: "navLinks", navItems: [
                                ]};
 const codeStyle = "color:powderblue";
 
-storiesOf('Small Components/NavLinksContainer', module)
+storiesOf('Sub Components/NavLinksContainer', module)
    .add('NavigationLinksContianer', withInfo(
  `
     #### Usage
     - Use this when there is a need to render a group of navigation links with active navlink highlighter
 
-    - navLinks property describes the navLinks details to be rendered.
-        navLinks property used for the current story:
+    - *navLinks* property describes the navLinks details to be rendered.
+        *navLinks* property used for the current story:
                 <pre><code style=${codeStyle}>
                     {type: "navLinks", navItems: [
                             {type: "navLink", text: "Screener Summary", href: "#screenerSummary"},
@@ -53,9 +53,9 @@ storiesOf('Small Components/NavLinksContainer', module)
 
     - NavLinksContainer component can render nested navlinks. An example of this is shown in one of the stories.
 
-    - navLinks property takes an object with key/value pairs. It's type is defined as 'navLinks'.
+    - *navLinks* property takes an object with key/value pairs. It's type is defined as 'navLinks'.
 
-    - navLinks.navItems property which is an array of 'navLink'/'navLinkWithInnerNav' type elements.
+    - *navLinks.navItems* property which is an array of 'navLink'/'navLinkWithInnerNav' type elements.
 
     - navLinks.navItems array has type 'navLink' elements when there is a need to render a simple navigation link. 'navLink' type element takes type, text, href, preIcon, postIcon properties.
             Example :

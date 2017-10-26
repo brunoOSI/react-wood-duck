@@ -11,11 +11,11 @@ const basicNavLinksUsage =
 
         - NavLinks component can render nested navlinks. An example of this is shown under the NavLinks menu.
 
-        - navLinks property takes an object with key/value pairs. It's type is expected to be 'navLinks'.
+        - *navLinks* property takes an object with key/value pairs. It's type is expected to be 'navLinks'.
 
-        - navLinks.navItems property which is an array of 'navLink'/'navLinkWithInnerNav' type elements.
+        - *navLinks.navItems* property which is an array of 'navLink'/'navLinkWithInnerNav' type elements.
 
-        - navLinks.navItems array has type 'navLink' elements when there is a need to render a simple navigation link. 'navLink' type element takes type, text, href, preIcon, postIcon properties. It could look like below.
+        - *navLinks.navItems* array has type 'navLink' elements when there is a need to render a simple navigation link. 'navLink' type element takes type, text, href, preIcon, postIcon properties. It could look like below.
                <pre><code style=${codeStyle}>{type: 'navLink', text: 'Screener Summary', href: '#screenerSummary'}</code></pre>
 
         - navLinks.navItems array has type 'navLinkWithInnerNav' elements to render an inner nav. It could look like below.
@@ -54,7 +54,7 @@ const navLinksWithInnerNav = {type: "navLinks", navItems: [
                                    {type: "navLink", text: "History of Involvement", href: "#history"},
                                ]};
 
-storiesOf('Small Components/NavLinks', module)
+storiesOf('Sub Components/NavLinks', module)
    .add('Simple Navigation links', withInfo(`
         #### Usage
         - Used to render a group of navigation links
@@ -77,9 +77,9 @@ storiesOf('Small Components/NavLinks', module)
    )))
    .add('Nested navigation links ', withInfo(`
        #### Usage
-         - Provide navLinks property with navigation links details to render
+         - Provide *navLinks* property with navigation links details to render
 
-         - navLinks property could look like below for nested navigation links:
+         - *navLinks* property could look like below for nested navigation links:
                   <pre><code style=${codeStyle}>    
                       {type: "navLinks", navItems: [
                               {type: "navLink", text: "Screener Summary", href: "#screenerSummary"},

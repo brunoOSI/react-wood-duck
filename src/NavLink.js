@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 class NavLink extends React.Component {
   render() {
-    console.debug('nav link props: ' + this.props.active);
     const preIcon = this.props.preIcon ? (
       <i className={this.props.preIcon} />
     ) : null;
@@ -38,7 +37,7 @@ class NavLink extends React.Component {
 NavLink.propTypes = {
   /** NavLink Text  */
   text: PropTypes.string.isRequired,
-  /** NavLink Href */
+  /** NavLink url/href */
   href: PropTypes.string.isRequired,
   /** Pre Icon css class name(s) */
   preIcon: PropTypes.string,

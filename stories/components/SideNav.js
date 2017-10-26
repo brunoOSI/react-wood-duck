@@ -30,15 +30,27 @@ const CenterDecorator = story => (
 const SideNavStory = withInfo(
  `
     #### Usage
-    - A side navigation component renders different types of content based on the content property value. For now it can just render a group of navigation links.
+    - A side navigation component renders different types of content based on the *content* property value. For now it can just render a group of navigation links.
 
     - Its functionality can be extended to render other types of elements apart from navigation links.
 
-    - It uses content property to render different types of content.
+    - It uses *content* property to render different types of content.
 
-    - content property is an array objects. Each object takes form of **{ type: 'elementtype', otherPropsToRenderThisElement: {'other props value'} }**.
+    - To render a group of navigations links in Side Nav, *content* property could look like :
+               <pre><code style=${codeStyle}>
+                   [
+                        {type: "navLinks", navItems: [
+                            {type: "navLink", text: "Screener Summary", href: "#screenerSummary"},
+                            {type: "navLink", text: "Allgeations & Disposition", href: "#allegations"},
+                            {type: "navLink", text: "History of Involvement", href: "#history"},
+                        ]
+                        }
+                   ]
+               </code></pre>
 
-    - content property structure is shown below. type *navLinks* is the only supported type as of now. Other *futureType1* etc are shown for demonstration purpose.
+    - *content* property is an array objects. Each object takes form of **{ type: 'elementtype', otherPropsToRenderThisElement: {'other props value'} }**.
+
+    - *content* property structure is shown below. type 'navLinks' is the only supported type as of now. Other 'futureType1' etc are shown for demonstration purpose.
              <pre><code style=${codeStyle}>
                  [
                      {type: "navLinks", navItems: […] },
@@ -47,7 +59,7 @@ const SideNavStory = withInfo(
                  ]
              </code></pre>
 
-      * *navLinks* type element structure is shown below. 
+      * 'navLinks' type element structure is shown below.
               <pre><code style=${codeStyle}>
                   {type: "navLinks", navItems: [
                       {type: "navLink", …other properties of navlink element }
@@ -56,10 +68,10 @@ const SideNavStory = withInfo(
                   ]}
               </code></pre>
       
-      * Each *navLink* type element in *navLink.navItems* could look like
+      * Each 'navLink' type element in *navLink.navItems* could look like
              <pre><code style=${codeStyle}>{type: "navLink", text: "Screener Summary", href: "#screenerSummary"}</code></pre>
 
-      * Each *navLinkWithInnerNav* type element in *navLink.navItems* could look like
+      * Each 'navLinkWithInnerNav' type element in *navLink.navItems* could look like
                <pre><code style=${codeStyle}>    
                    {
                         type: "navLinkWithInnerNav", text: "People & Roles", href:"#pplroles", navItems: [
@@ -69,19 +81,7 @@ const SideNavStory = withInfo(
                    }
                </code></pre>
     
-    - To render a group of navigations links in Side Nav, content property could look like :
-               <pre><code style=${codeStyle}>     
-                   [
-                        {type: "navLinks", navItems: [
-                            {type: "navLink", text: "Screener Summary", href: "#screenerSummary"},
-                            {type: "navLink", text: "Allgeations & Disposition", href: "#allegations"},
-                            {type: "navLink", text: "History of Involvement", href: "#history"},
-                        ]
-                        }   
-                   ]
-               </code></pre>
-
-    - To render nested navigation links, content property could look like :
+    - To render nested navigation links, *content* property could look like :
             <pre><code style=${codeStyle}>
                 [
                     {type: "navLinks", navItems: [

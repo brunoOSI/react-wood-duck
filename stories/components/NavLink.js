@@ -13,10 +13,10 @@ const basicNavLinkUsage = `
 
       - Do not use if there is a single anchor link.
 
-      - This supports a number of variations by passing a different set of properties which are shown as seperate stories under NavLink story. All these variations can be used individually or together.
+      - This supports a number of variations by passing a different set of properties which are shown as seperate stories under NavLink story. All these properties can be used individually or together.
 
        `;
-storiesOf('Small Components/NavLink', module)
+storiesOf('Sub Components/NavLink', module)
    .add('Basic NavLink', withInfo(
       `${basicNavLinkUsage}`) (() => (
       <ul className="nav nav-stacked">
@@ -27,7 +27,7 @@ storiesOf('Small Components/NavLink', module)
      #### Usage
       - Use when this Navigation link is currently selected.
 
-      - Give active property with true value.
+      - Provide *active* property with true value.
 
      ${basicNavLinkUsage}
     `)(() => (
@@ -39,7 +39,7 @@ storiesOf('Small Components/NavLink', module)
      #### Usage
       - Use when there is a need to show pre icon for Navigation Link.
 
-      - Give a preIcon property to NavLink component. This is string with value of css className(s) to display the icon.
+      - Provide *preIcon* property to NavLink component. This is string with value of css className(s) to display the icon.
 
      ${basicNavLinkUsage}
     `)(() => (
@@ -51,7 +51,7 @@ storiesOf('Small Components/NavLink', module)
      #### Usage
       - Use when there is a need to show post icon for Navigation Link.
 
-      - Give a postIcon property to NavLink component. This is string with value of css className(s) to display the icon.
+      - Provide a *postIcon* property to NavLink component. This is string with value of css className(s) to display the icon.
 
      ${basicNavLinkUsage}
     `)(() => (
