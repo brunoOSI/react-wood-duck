@@ -79,7 +79,7 @@ const SideNavStory = withInfo(
                         ]
                         }   
                    ]
-        </code></pre>
+               </code></pre>
 
     - To render nested navigation links, content property could look like :
             <pre><code style=${codeStyle}>
