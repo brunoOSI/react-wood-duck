@@ -22,7 +22,7 @@ const navLinksWithInnerNav = {type: "navLinks", navItems: [
                                ]};
 const codeStyle = "color:powderblue";
 
-storiesOf('Components', module)
+storiesOf('Small Components/NavLinksContainer', module)
    .add('NavigationLinksContianer', withInfo(
  `
     #### Usage
