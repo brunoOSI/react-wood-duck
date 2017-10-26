@@ -16,9 +16,9 @@ const basicNavLinkUsage = `
       - This supports a number of variations by passing a different set of properties which are shown as seperate stories under NavLink story. All these variations can be used individually or together.
 
        `;
-storiesOf('Components/NavLink', module)
+storiesOf('Small Components/NavLink', module)
    .add('Basic NavLink', withInfo(
-       `${basicNavLinkUsage}`) (() => (
+      `${basicNavLinkUsage}`) (() => (
       <ul className="nav nav-stacked">
          <NavLink href="test.html" text="Nav Link" />
       </ul>

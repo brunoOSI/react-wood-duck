@@ -6,4 +6,4 @@ import GlobalHeader from '../../src/GlobalHeader';
 
 const GlobalHeaderStory = () => <GlobalHeader />;
 
-storiesOf('Components/GlobalHeader', module).add('GlobalHeader', GlobalHeaderStory);
+storiesOf('Components', module).add('GlobalHeader', GlobalHeaderStory);

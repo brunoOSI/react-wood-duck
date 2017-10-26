@@ -35,12 +35,11 @@ class SideNav extends React.Component {
 }
 
 SideNav.propTypes = {
-  content: PropTypes.string.isRequired,
+  content: PropTypes.object,
   columnWidth: PropTypes.number,
 };
 
 SideNav.defaultProps = {
-  content: '',
   columnWidth: 3,
 };
 

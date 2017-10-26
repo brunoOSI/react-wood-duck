@@ -6,4 +6,4 @@ import PageHeader from '../../src/PageHeader';
 
 const PageHeaderStory = () => <PageHeader />;
 
-storiesOf('Components/PageHeader', module).add('PageHeader', PageHeaderStory);
+storiesOf('Components', module).add('PageHeader', PageHeaderStory);

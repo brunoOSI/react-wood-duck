@@ -4,4 +4,4 @@ import Layout01 from '../../src/Layout01';
 
 const Layout01Story = () => <Layout01 />;
 
-storiesOf('Components/Layout01', module).add('Layout01', Layout01Story);
+storiesOf('Components', module).add('Layout01', Layout01Story);
