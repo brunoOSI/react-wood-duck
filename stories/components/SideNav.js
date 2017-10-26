@@ -36,7 +36,38 @@ const SideNavStory = withInfo(
 
     - It uses content property to render different types of content.
 
-    - content property is an array objects. Each object takes form of { type: 'elementtype', otherPropsToRenderThisElement: {'other props value'} }.
+    - content property is an array objects. Each object takes form of **{ type: 'elementtype', otherPropsToRenderThisElement: {'other props value'} }**.
+
+    - content property structure is shown below. type *navLinks* is the only supported type as of now. Other *futureType1* etc are shown for demonstration purpose.
+             <pre><code style=${codeStyle}>
+                 [
+                     {type: "navLinks", navItems: […] },
+                     {type: "futuretype1", propertiesOfFutureType1: {}}
+                     {type: "futuretype2”, propertiesOfFutureType2: {}}
+                 ]
+             </code></pre>
+
+      * *navLinks* type element structure is shown below. 
+              <pre><code style=${codeStyle}>
+                  {type: "navLinks", navItems: [
+                      {type: "navLink", …other properties of navlink element }
+                      {type: "navlink", ….other properties of navlink element }
+                      {type: "navLinkInnerNav", …other properties of navLinkWithInnerNav element }
+                  ]}
+              </code></pre>
+      
+      * Each *navLink* type element in *navLink.navItems* could look like
+             <pre><code style=${codeStyle}>{type: "navLink", text: "Screener Summary", href: "#screenerSummary"}</code></pre>
+
+      * Each *navLinkWithInnerNav* type element in *navLink.navItems* could look like
+               <pre><code style=${codeStyle}>    
+                   {
+                        type: "navLinkWithInnerNav", text: "People & Roles", href:"#pplroles", navItems: [
+                            {type: "navLink", text: "Aubrey Cambell", href:"#aubrey", preIcon: "fa fa-user"},
+                            {type: "navLink", text: "Chris Cambell", href: "#chris", preIcon: "fa fa-user"}
+                        ]
+                   }
+               </code></pre>
     
     - To render a group of navigations links in Side Nav, content property could look like :
                <pre><code style=${codeStyle}>     
@@ -67,8 +98,6 @@ const SideNavStory = withInfo(
                     }
                 ]
 
-    - SideNav depends on NavLinksContainer component to render a group of navigation links. To know more details about how to construct content property with navLinks type, please refer to NavLinksContainer component in storybook.
- 
  `)(() => (<div>
     <div className="row">
         <SideNav content={navLinks} columnWidth={3} />
