@@ -107,6 +107,6 @@ const CheckboxRadioGroupStory = withInfo(
   </div>
 ));
 
-storiesOf('In Progress', module)
+storiesOf('Components', module)
   .addDecorator(CenterDecorator)
   .add('CheckboxRadioGroup', CheckboxRadioGroupStory);

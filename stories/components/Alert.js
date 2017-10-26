@@ -40,6 +40,6 @@ const alert = withInfo(
   </div>
 ));
 
-storiesOf('In Progress', module)
+storiesOf('Components', module)
   .addDecorator(CenterDecorator)
   .add('Alert', alert);

@@ -89,6 +89,6 @@ const ButtonStory = withInfo(
   </div>
 ));
 
-storiesOf('In Progress', module)
+storiesOf('Components', module)
   .addDecorator(CenterDecorator)
   .add('Button', ButtonStory);

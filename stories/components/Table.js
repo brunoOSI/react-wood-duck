@@ -41,6 +41,6 @@ const TableStory = withInfo(
   `
 )(() => <Table />);
 
-storiesOf('In Progress', module)
+storiesOf('Components', module)
   .addDecorator(CenterDecorator)
   .add('Table', TableStory);

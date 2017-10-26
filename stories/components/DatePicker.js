@@ -19,6 +19,6 @@ const DatePickerStory = () => (
   />
 );
 
-storiesOf('In Progress', module)
+storiesOf('Components', module)
   .addDecorator(CenterDecorator)
   .add('DatePicker', DatePickerStory);

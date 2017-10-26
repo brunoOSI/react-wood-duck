@@ -1,8 +1,6 @@
-
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
-import { withInfo } from '@storybook/addon-info';
 
 import CommonAddressComponent from '../../src/CommonAddressComponent';
 
@@ -11,55 +9,57 @@ const addressFields = {
   street_address: '',
   zip: '',
   city: '',
-  state: null
-}
+  state: null,
+};
 const stateTypes = {
   items: [
     {
-      'id': 1,
-      'value': 'Alabama'
+      id: 1,
+      value: 'Alabama',
     },
     {
-      'id': 2,
-      'value': 'Alaska'
+      id: 2,
+      value: 'Alaska',
     },
     {
-      'id': 3,
-      'value': 'American Samoa'
+      id: 3,
+      value: 'American Samoa',
     },
     {
-      'id': 4,
-      'value': 'Arizona'
+      id: 4,
+      value: 'Arizona',
     },
     {
-      'id': 5,
-      'value': 'Arkansas'
+      id: 5,
+      value: 'Arkansas',
     },
     {
-      'id': 6,
-      'value': 'California'
-    }
-  ]
-}
+      id: 6,
+      value: 'California',
+    },
+  ],
+};
 const onChange = (key, value) => {
-  addressFields[key] = value
-}
-const CenterDecorator = (storyFn) => (
-  <div className='container' style={styles} >
-    { storyFn() }
+  addressFields[key] = value;
+};
+const CenterDecorator = storyFn => (
+  <div className="container" style={styles}>
+    {storyFn()}
   </div>
 );
 
-const CommonAddressComponentStory = () => (<CommonAddressComponent
-  addressTitle='Physical Address'
-  addressType='Residential'
-  id='street_address'
-  suggestions={[]}
-  stateTypes={stateTypes.items}
-  addressFields={addressFields}
-  onChange={(event) => onChange(key, event)}
-/>)
+const CommonAddressComponentStory = () => (
+  <CommonAddressComponent
+    addressTitle="Physical Address"
+    addressType="Residential"
+    id="street_address"
+    suggestions={[]}
+    stateTypes={stateTypes.items}
+    addressFields={addressFields}
+    onChange={onChange()}
+  />
+);
 
-storiesOf('In Progress', module)
+storiesOf('Components', module)
   .addDecorator(CenterDecorator)
   .add('CommonAddressComponent', CommonAddressComponentStory);
