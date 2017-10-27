@@ -37,12 +37,6 @@ describe('Side Nav', function() {
     sideNavWithnavigationLinksresultTag = renderer.getRenderOutput();
   });
 
-  it('returns null when content is empty', function() {
-    renderer.render(<SideNav />);
-    const resultTag = renderer.getRenderOutput();
-    expect(resultTag).toBe(null);
-  });
-
   it('returns side nav element given valid content', function() {
     expect(sideNavWithnavigationLinksresultTag).not.toBe(null);
     expect(sideNavWithnavigationLinksresultTag.type).toBe('div');
@@ -70,7 +64,7 @@ describe('Side Nav', function() {
         role="navigation"
         aria-label="Main Content Navigation Menu"
       >
-        <NavLinksContainer navLinks={simpleNavLinks[0]} />
+        <NavLinksContainer navLinks={simpleNavLinks[0].navItems} />
       </div>
     );
   });
@@ -86,7 +80,7 @@ describe('Side Nav', function() {
 
   it('returns side nav element with default column width when columnWidth is not provided', function() {
     renderer.render(
-      <SideNav content={[{ var1: 'value1' }, { var2: 'value2' }]} />
+      <SideNav content={simpleNavLinks} />
     );
     const resultTag = renderer.getRenderOutput();
     expect(resultTag.props.className).toContain('col-md-3');
@@ -95,7 +89,7 @@ describe('Side Nav', function() {
   it('returns side nav element with specified column width', function() {
     renderer.render(
       <SideNav
-        content={[{ var1: 'value1' }, { var2: 'value2' }]}
+        content={simpleNavLinks}
         columnWidth={4}
       />
     );

@@ -21,7 +21,7 @@ class SideNav extends React.Component {
               role="navigation"
               aria-label="Main Content Navigation Menu"
             >
-              <NavLinksContainer navLinks={sideNavItem} />
+              <NavLinksContainer navLinks={sideNavItem.navItems} />
             </div>
           );
       });
@@ -35,7 +35,7 @@ class SideNav extends React.Component {
 }
 
 SideNav.propTypes = {
-  content: PropTypes.object,
+  content: PropTypes.arrayOf(PropTypes.object).isRequired,
   columnWidth: PropTypes.number,
 };
 

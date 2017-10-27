@@ -11,9 +11,8 @@ class NavLinksContainer extends React.Component {
 
   getDefaultActiveNavLinkHref() {
     return this.props.navLinks &&
-      this.props.navLinks.navItems &&
-      this.props.navLinks.navItems.length > 0
-      ? this.props.navLinks.navItems[0].href
+      this.props.navLinks.length > 0
+      ? this.props.navLinks[0].href
       : null;
   }
 
@@ -22,9 +21,10 @@ class NavLinksContainer extends React.Component {
   }
 
   render() {
+    const {navLinks} = this.props;
     return (
       <NavLinks
-        navLinks={this.props.navLinks}
+        navLinks={navLinks}
         handleClick={this.handleNavLinkClick}
         activeNavLinkHref={this.state.activeNavLinkHref}
       />
@@ -33,7 +33,7 @@ class NavLinksContainer extends React.Component {
 }
 
 NavLinksContainer.propTypes = {
-  navLinks: PropTypes.object.isRequired,
+  navLinks: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default NavLinksContainer;

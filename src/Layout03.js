@@ -31,11 +31,12 @@ class Layout03 extends React.Component {
         ],
       },
     ];
+    const sideNavColumnWidth = 2;
     return (
       <div>
         <GlobalHeader />
         <PageHeader />
-        <SideNav content={sideNavContent} />
+        <SideNav content={sideNavContent} columnWidth={sideNavColumnWidth} />
         <div>{this.props.children}</div>
       </div>
     );

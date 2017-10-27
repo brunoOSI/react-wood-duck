@@ -4,9 +4,8 @@ import NavLink from '../NavLink';
 import NavLinks from '../NavLinks';
 
 describe('NavLinks', function() {
-  const simpleNavLinks = {
-    type: 'navLinks',
-    navItems: [
+  const simpleNavLinks =
+    [
       {
         type: 'navLink',
         text: 'Tommy Cambell',
@@ -18,12 +17,10 @@ describe('NavLinks', function() {
         text: 'Aubrey Cambell',
         href: '#au',
         preIcon: 'fa fa-user',
-      },
-    ],
-  };
-  const navLinksWithSubNavLinks = {
-    type: 'navLinks',
-    navItems: [
+      }
+    ];
+  const navLinksWithSubNavLinks =
+    [
       {
         type: 'navLink',
         text: 'Screener Summary',
@@ -56,10 +53,9 @@ describe('NavLinks', function() {
           },
         ],
       },
-    ],
-  };
+    ];
   const renderer = ReactTestUtils.createRenderer();
-  const nullNavLinksComponent = renderer.render(<NavLinks navLinks="" />);
+  const nullNavLinksComponent = renderer.render(<NavLinks navLinks={[]} />);
   var clickHandler = function() {
     console.log('test msg');
   };
@@ -67,7 +63,7 @@ describe('NavLinks', function() {
     <NavLinks
       navLinks={simpleNavLinks}
       handleClick={clickHandler}
-      activeNavLinkHref={simpleNavLinks.navItems[0].href}
+      activeNavLinkHref={simpleNavLinks[0].href}
       indentationLevel={0}
     />
   );
@@ -78,7 +74,7 @@ describe('NavLinks', function() {
     <NavLinks
       navLinks={navLinksWithSubNavLinks}
       handleClick={clickHandler}
-      activeNavLinkHref={navLinksWithSubNavLinks.navItems[0].href}
+      activeNavLinkHref={navLinksWithSubNavLinks[0].href}
       indentationLevel={0}
     />
   );
@@ -99,11 +95,11 @@ describe('NavLinks', function() {
   it('Verify simple navigation links', function() {
     expect(simpleNavLinksResultTag.props.children).toEqual([
       <NavLink
-        key={simpleNavLinks.navItems[0].text}
-        text={simpleNavLinks.navItems[0].text}
-        href={simpleNavLinks.navItems[0].href}
-        preIcon={simpleNavLinks.navItems[0].preIcon}
-        postIcon={simpleNavLinks.navItems[0].postIcon}
+        key={simpleNavLinks[0].text}
+        text={simpleNavLinks[0].text}
+        href={simpleNavLinks[0].href}
+        preIcon={simpleNavLinks[0].preIcon}
+        postIcon={simpleNavLinks[0].postIcon}
         handleClick={clickHandler}
         active={true}
         indentationLevel={0}
@@ -111,11 +107,11 @@ describe('NavLinks', function() {
         {null}
       </NavLink>,
       <NavLink
-        key={simpleNavLinks.navItems[1].text}
-        text={simpleNavLinks.navItems[1].text}
-        href={simpleNavLinks.navItems[1].href}
-        preIcon={simpleNavLinks.navItems[1].preIcon}
-        postIcon={simpleNavLinks.navItems[1].postIcon}
+        key={simpleNavLinks[1].text}
+        text={simpleNavLinks[1].text}
+        href={simpleNavLinks[1].href}
+        preIcon={simpleNavLinks[1].preIcon}
+        postIcon={simpleNavLinks[1].postIcon}
         handleClick={clickHandler}
         active={false}
         indentationLevel={0}
@@ -130,11 +126,11 @@ describe('NavLinks', function() {
     expect(navLinksWithSubNavLinksResultTag.props.children.length).toBe(2);
     expect(navLinksWithSubNavLinksResultTag.props.children).toEqual([
       <NavLink
-        key={navLinksWithSubNavLinks.navItems[0].text}
-        text={navLinksWithSubNavLinks.navItems[0].text}
-        href={navLinksWithSubNavLinks.navItems[0].href}
-        preIcon={navLinksWithSubNavLinks.navItems[0].preIcon}
-        postIcon={navLinksWithSubNavLinks.navItems[0].postIcon}
+        key={navLinksWithSubNavLinks[0].text}
+        text={navLinksWithSubNavLinks[0].text}
+        href={navLinksWithSubNavLinks[0].href}
+        preIcon={navLinksWithSubNavLinks[0].preIcon}
+        postIcon={navLinksWithSubNavLinks[0].postIcon}
         handleClick={clickHandler}
         active={true}
         indentationLevel={0}
@@ -142,19 +138,19 @@ describe('NavLinks', function() {
         {null}
       </NavLink>,
       <NavLink
-        key={navLinksWithSubNavLinks.navItems[1].text}
-        text={navLinksWithSubNavLinks.navItems[1].text}
-        href={navLinksWithSubNavLinks.navItems[1].href}
-        preIcon={navLinksWithSubNavLinks.navItems[1].preIcon}
-        postIcon={navLinksWithSubNavLinks.navItems[1].postIcon}
+        key={navLinksWithSubNavLinks[1].text}
+        text={navLinksWithSubNavLinks[1].text}
+        href={navLinksWithSubNavLinks[1].href}
+        preIcon={navLinksWithSubNavLinks[1].preIcon}
+        postIcon={navLinksWithSubNavLinks[1].postIcon}
         handleClick={clickHandler}
         active={false}
         indentationLevel={0}
       >
         <NavLinks
-          navLinks={navLinksWithSubNavLinks.navItems[1]}
+          navLinks={navLinksWithSubNavLinks[1]}
           handleClick={clickHandler}
-          activeNavLinkHref={navLinksWithSubNavLinks.navItems[0].href}
+          activeNavLinkHref={navLinksWithSubNavLinks[0].href}
           indentationLevel={1}
         />
       </NavLink>,

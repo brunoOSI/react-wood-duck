@@ -4,36 +4,36 @@ import NavLink from './NavLink';
 
 class NavLinks extends React.Component {
   render() {
+    const {navLinks, indentationLevel, activeNavLinkHref, handleClick } = this.props;
     if (
-      !this.props.navLinks ||
-      !this.props.navLinks.navItems ||
-      this.props.navLinks.navItems.length === 0
+      !navLinks ||
+      navLinks.length === 0
     ) {
       return null;
     }
-    const navLinksComponentsList = this.props.navLinks.navItems.map(function(
-      navItem
+    const navLinksComponentsList = navLinks.map(function(
+      currentNavLink
     ) {
       const navLinkProps = {
-        text: navItem.text,
-        href: navItem.href,
-        preIcon: navItem.preIcon,
-        postIcon: navItem.postIcon,
-        handleClick: this.props.handleClick,
-        active: this.props.activeNavLinkHref === navItem.href,
-        indentationLevel: this.props.indentationLevel,
+        text: currentNavLink.text,
+        href: currentNavLink.href,
+        preIcon: currentNavLink.preIcon,
+        postIcon: currentNavLink.postIcon,
+        handleClick: handleClick,
+        active: activeNavLinkHref === currentNavLink.href,
+        indentationLevel: indentationLevel,
       };
       const navLinkChildren =
-        navItem.type === 'navLinkWithInnerNav' ? (
+        currentNavLink.type === 'navLinkWithInnerNav' ? (
           <NavLinks
-            navLinks={navItem}
-            handleClick={this.props.handleClick}
-            activeNavLinkHref={this.props.activeNavLinkHref}
-            indentationLevel={this.props.indentationLevel + 1}
+            navLinks={currentNavLink}
+            handleClick={handleClick}
+            activeNavLinkHref={activeNavLinkHref}
+            indentationLevel={indentationLevel + 1}
           />
         ) : null;
       return (
-        <NavLink key={navItem.text} {...navLinkProps}>
+        <NavLink key={currentNavLink.text} {...navLinkProps}>
           {navLinkChildren}
         </NavLink>
       );
@@ -45,7 +45,7 @@ class NavLinks extends React.Component {
 
 NavLinks.propTypes = {
   /** List describing navigation links to be rendered */
-  navLinks: PropTypes.object.isRequired,
+  navLinks: PropTypes.arrayOf(PropTypes.object).isRequired,
   /** Indentation Level of navigation links. Useful for nested navigation links */
   indentationLevel: PropTypes.number,
   /** Indicates Href of currently active navlink */
