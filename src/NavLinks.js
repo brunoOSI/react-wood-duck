@@ -26,7 +26,7 @@ class NavLinks extends React.Component {
       const navLinkChildren =
         currentNavLink.type === 'navLinkWithInnerNav' ? (
           <NavLinks
-            navLinks={currentNavLink}
+            navLinks={currentNavLink.navItems}
             handleClick={handleClick}
             activeNavLinkHref={activeNavLinkHref}
             indentationLevel={indentationLevel + 1}

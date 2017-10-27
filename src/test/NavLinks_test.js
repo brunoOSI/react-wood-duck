@@ -121,7 +121,7 @@ describe('NavLinks', function() {
     ]);
   });
 
-  it('Verify navigation links with sub navigation links', function() {
+  it('Verify nested navigation links', function() {
     expect(navLinksWithSubNavLinksResultTag.type).toBe('ul');
     expect(navLinksWithSubNavLinksResultTag.props.children.length).toBe(2);
     expect(navLinksWithSubNavLinksResultTag.props.children).toEqual([
@@ -148,7 +148,7 @@ describe('NavLinks', function() {
         indentationLevel={0}
       >
         <NavLinks
-          navLinks={navLinksWithSubNavLinks[1]}
+          navLinks={navLinksWithSubNavLinks[1].navItems}
           handleClick={clickHandler}
           activeNavLinkHref={navLinksWithSubNavLinks[0].href}
           indentationLevel={1}

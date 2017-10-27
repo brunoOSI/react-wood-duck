@@ -11,14 +11,12 @@ const basicNavLinksUsage =
 
         - NavLinks component can render nested navlinks. An example of this is shown under the NavLinks menu.
 
-        - *navLinks* property takes an object with key/value pairs. It's type is expected to be 'navLinks'.
+        - *navLinks* property is an array of 'navLink'/'navLinkWithInnerNav' type elements.
 
-        - *navLinks.navItems* property which is an array of 'navLink'/'navLinkWithInnerNav' type elements.
-
-        - *navLinks.navItems* array has type 'navLink' elements when there is a need to render a simple navigation link. 'navLink' type element takes type, text, href, preIcon, postIcon properties. It could look like below.
+        - *navLinks* array has type 'navLink' element when there is a need to render a simple navigation link. 'navLink' type element takes type, text, href, preIcon, postIcon properties. It could look like below.
                <pre><code style=${codeStyle}>{type: 'navLink', text: 'Screener Summary', href: '#screenerSummary'}</code></pre>
 
-        - navLinks.navItems array has type 'navLinkWithInnerNav' elements to render an inner nav. It could look like below.
+        - navLinks array has type 'navLinkWithInnerNav' elements to render an inner/nested nav. It could look like below.
               <pre><code style=${codeStyle}>
                  {
                      type: "navLinkWithInnerNav", text: "People & Roles", href:"#pplroles", navItems: [
@@ -34,14 +32,13 @@ const basicNavLinksUsage =
 
  `;
 
-const simpleNavLinks = { type: "navLinks", navItems: [
+const simpleNavLinks = [
                           {type: "navLink", text: "Tommy Cambell", href: "#tom", preIcon: "fa fa-user"},
                           {type: "navLink", text: "Aubrey Cambell", href:"#aub", preIcon: "fa fa-user"},
                           {type: "navLink", text: "Chris Cambell", href: "#chr", preIcon: "fa fa-user"},
-                       ]
-                     };
+                       ];
 
-const navLinksWithInnerNav = {type: "navLinks", navItems: [
+const navLinksWithInnerNav = [
                                     {type: "navLink", text: "Screener Summary", href: "#screenerSummary"},
                                     {type: "navLink", text: "Allgeations & Disposition", href: "#allegations"},
                                     {
@@ -52,21 +49,20 @@ const navLinksWithInnerNav = {type: "navLinks", navItems: [
                                        ]
                                     },
                                    {type: "navLink", text: "History of Involvement", href: "#history"},
-                               ]};
+                             ];
 
 storiesOf('Sub Components/NavLinks', module)
    .add('Simple Navigation links', withInfo(`
         #### Usage
         - Used to render a group of navigation links
 
-        - Include a *navLinks* property including details for navigation links as shown in the example below.
+        - *navLinks* property could look like below to render a groupd of navigation links.
                 <pre><code style=${codeStyle}>
-                    { type: "navLinks", navItems: [
+                    [
                         {type: "navLink", text: "Tommy Cambell", href: "#tom", preIcon: "fa fa-user"},
                         {type: "navLink", text: "Aubrey Cambell", href:"#aub", preIcon: "fa fa-user"},
                         {type: "navLink", text: "Chris Cambell", href: "#chr", preIcon: "fa fa-user"},
-                      ]
-                    }
+                    ]
                 </code></pre>
         * * *
         ${basicNavLinksUsage}
@@ -81,19 +77,18 @@ storiesOf('Sub Components/NavLinks', module)
 
          - *navLinks* property could look like below for nested navigation links:
                   <pre><code style=${codeStyle}>    
-                      {type: "navLinks", navItems: [
-                              {type: "navLink", text: "Screener Summary", href: "#screenerSummary"},
-                              {type: "navLink", text: "Allgeations & Disposition", href: "#allegations"}:u
-                              {
-                                  type: "navLinkWithInnerNav", text: "People & Roles", href:"#pplroles", navItems: [
-                                      {type: "navLink", text: "Tommy Cambell", href: "#tommy", preIcon: "fa fa-user", postIcon: "fa fa-exclamation-triangle c-red"},
-                                      {type: "navLink", text: "Aubrey Cambell", href:"#aubrey", preIcon: "fa fa-user"},
-                                      {type: "navLink", text: "Chris Cambell", href: "#chris", preIcon: "fa fa-user"}
-                                  ]
-                              },
-                              {type: "navLink", text: "History of Involvement", href: "#history"},
-                          ]
-                      }
+                      [
+                          {type: "navLink", text: "Screener Summary", href: "#screenerSummary"},
+                          {type: "navLink", text: "Allgeations & Disposition", href: "#allegations"}:u
+                          {
+                              type: "navLinkWithInnerNav", text: "People & Roles", href:"#pplroles", navItems: [
+                                  {type: "navLink", text: "Tommy Cambell", href: "#tommy", preIcon: "fa fa-user", postIcon: "fa fa-exclamation-triangle c-red"},
+                                  {type: "navLink", text: "Aubrey Cambell", href:"#aubrey", preIcon: "fa fa-user"},
+                                  {type: "navLink", text: "Chris Cambell", href: "#chris", preIcon: "fa fa-user"}
+                              ]
+                          },
+                          {type: "navLink", text: "History of Involvement", href: "#history"},
+                      ]
                   </code></pre>
 
        * * *
