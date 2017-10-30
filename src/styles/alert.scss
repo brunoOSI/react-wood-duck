@@ -62,6 +62,8 @@
   margin-top: $base-spacing;
   width: 100%;
   border-color: $ash-grey;
+  border-top-right-radius: $thin-border;
+  border-bottom-right-radius: $thin-border;
 
   .alert-icon {
     display: table-cell;
@@ -70,8 +72,9 @@
     text-align: center;
     vertical-align: middle;
     width: $double-width;
-    border-top-left-radius: $regular-border;
-    border-bottom-left-radius: $regular-border;
+    border-color: $ash-grey;
+    border-top-left-radius: $thin-border;
+    border-bottom-left-radius: $thin-border;
   }
 
   .alert-text {
@@ -95,8 +98,6 @@
     border-top: $thin-border solid;
     border-bottom: $thin-border solid;
     border-color: $ash-grey;
-    border-top-right-radius: $regular-border;
-    border-bottom-right-radius: $regular-border;
   }
 }
 

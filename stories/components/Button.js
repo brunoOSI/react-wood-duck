@@ -86,7 +86,7 @@ const ButtonStory = withInfo(
         <Button btnClassName="default" btnName="Secondary" />
       </div>
       <div className="col-lg-6 text-center">
-        <Button btnClassName="secondary" btnName="Secondary" disabled={true} />
+        <Button btnClassName="default" btnName="Secondary" disabled={true} />
       </div>
     </div>
     <div className="row" style={styles}>

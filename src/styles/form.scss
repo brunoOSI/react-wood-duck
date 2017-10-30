@@ -101,36 +101,38 @@ legend {
   content: '\a0';
   background: #fff;
   display: inline-block;
-  width: 1.8rem;
-  height: 1.8rem;
-  vertical-align: -0.2rem;
+  width: 2rem;
+  height: 2rem;
+  vertical-align: -0.1rem;
   border-radius: 100%;
-  border: 0.15rem solid #fff;
+  border: 0.3rem solid #fff;
   box-shadow: 0 0 0 0.19rem #767676;
   line-height: 1.8rem;
-  margin-right: 0.6rem;
+  margin-bottom: 0.75rem;
+  margin-right: 0.75rem;
   text-indent: 0.15rem;
   transition: 0.5s ease all;
 }
 
 [type='checkbox'] + span:before {
   content: '\a0';
+  width: 2rem;
+  height: 2rem;
   background: #fff;
   display: inline-block;
-  width: 1.8rem;
-  height: 1.8rem;
-  vertical-align: -0.2rem;
+  vertical-align: -0.1rem;
   border-radius: 0.2rem;
   border: solid 0.15rem #767676;
   line-height: 1.8rem;
-  margin-right: 0.6rem;
+  margin-bottom: 0.75rem;
+  margin-right: 0.75rem;
   text-indent: 0.15rem;
   transition: 0.01s ease all;
 }
 
 /* the checked style using the :checked pseudo class */
 [type='radio']:checked + span:before {
-  box-shadow: 0 0 0 0.15rem #00829b;
+  box-shadow: 0 0 0 0.2rem #00829b;
   background-color: #00829b;
 }
 [type='checkbox']:checked + span:before {
