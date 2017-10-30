@@ -6,12 +6,11 @@ import { withInfo } from '@storybook/addon-info';
 
 import Button from '../../src/Button';
 
-const center = { display: 'flex', justifyContent: 'center' };
-const style = { padding: '15px' };
+const styles = { padding: '1.5rem' };
 
-const CenterDecorator = storyFn => <div style={center}>{storyFn()}</div>;
-const ButtonContainer = ({ children }) => <div style={style}>{children}</div>;
-ButtonContainer.propTypes = { children: PropTypes };
+const CenterDecorator = storyFn => <div className="container">{storyFn()}</div>;
+const ButtonContainer = ({ children }) => <div style={styles}>{children}</div>;
+ButtonContainer.propTypes = { children: PropTypes.node };
 
 const ButtonStory = withInfo(
   ` 
@@ -73,20 +72,32 @@ const ButtonStory = withInfo(
       role='button'.
   `
 )(() => (
-  <div>
-    <ButtonContainer>
-      <Button btnClassName="primary" btnName="Primary Button" />
-    </ButtonContainer>
-    <ButtonContainer>
-      <Button btnClassName="default" btnName="Secondary Button" />
-    </ButtonContainer>
-    <ButtonContainer>
-      <Button btnClassName="warning" btnName="Warning Button" />
-    </ButtonContainer>
-    <ButtonContainer>
-      <Button btnClassName="default" btnName="Delete changes" disabled="true" />
-    </ButtonContainer>
-  </div>
+  <ButtonContainer>
+    <div className="row" style={styles}>
+      <div className="col-lg-6 text-center">
+        <Button btnClassName="primary" btnName="Primary" />
+      </div>
+      <div className="col-lg-6 text-center">
+        <Button btnClassName="primary" btnName="Primary" disabled={true} />
+      </div>
+    </div>
+    <div className="row" style={styles}>
+      <div className="col-lg-6 text-center">
+        <Button btnClassName="default" btnName="Secondary" />
+      </div>
+      <div className="col-lg-6 text-center">
+        <Button btnClassName="secondary" btnName="Secondary" disabled={true} />
+      </div>
+    </div>
+    <div className="row" style={styles}>
+      <div className="col-lg-6 text-center">
+        <Button btnClassName="warning" btnName="Warning" />
+      </div>
+      <div className="col-lg-6 text-center">
+        <Button btnClassName="warning" btnName="Warning" disabled={true} />
+      </div>
+    </div>
+  </ButtonContainer>
 ));
 
 storiesOf('Components', module)

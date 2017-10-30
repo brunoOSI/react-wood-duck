@@ -40,9 +40,6 @@ class GlobalHeader extends React.Component {
                   </a>
                 </li>
                 <li>
-                  <span className="divider" />
-                </li>
-                <li>
                   <p className="profile">
                     {' '}
                     <a href="#/">{profileName}</a>

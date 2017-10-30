@@ -14,7 +14,7 @@ class Layout01 extends React.Component {
     );
   }
 }
-Layout01.propTypes = { children: PropTypes };
+Layout01.propTypes = { children: PropTypes.any };
 Layout01.defaultProps = {};
 
 export default Layout01;

@@ -23,13 +23,13 @@ const CheckboxRadioGroup = props => (
 );
 
 CheckboxRadioGroup.propTypes = {
-  label: PropTypes.string.isRequired,
+  label: PropTypes.string,
   fieldClassName: PropTypes.string,
-  type: PropTypes.oneOf(['checkbox', 'radio']).isRequired,
-  name: PropTypes.string.isRequired,
-  options: PropTypes.array.isRequired,
+  type: PropTypes.oneOf(['checkbox', 'radio']),
+  name: PropTypes.string,
+  options: PropTypes.array,
   selectedOptions: PropTypes.array,
-  handleOnChange: PropTypes.func.isRequired,
+  handleOnChange: PropTypes.func,
 };
 
 export default CheckboxRadioGroup;

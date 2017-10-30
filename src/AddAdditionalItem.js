@@ -6,7 +6,7 @@ const AddAdditionalItem = props => (
 );
 
 AddAdditionalItem.propTypes = {
-  children: PropTypes,
+  children: PropTypes.any,
 };
 
 export default AddAdditionalItem;

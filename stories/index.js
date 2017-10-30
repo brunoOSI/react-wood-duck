@@ -32,9 +32,8 @@ import './components/ReactDatePicker';
 import './components/SideNav';
 import './components/Table';
 import './components/TextArea';
-import './components/Layout01';
-import './components/Layout03';
 // Page Templates
+import './page-templates/LandingPageTemplate';
 import './page-templates/Category';
+import './page-templates/DetailPageTemplate';
 import './page-templates/LandingWorkOverview';
-import './page-templates/Detail';

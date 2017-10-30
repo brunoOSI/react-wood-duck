@@ -2,32 +2,55 @@
  PAGE HEADER STYLING
 ***/
 
-
 .pageHeader {
-    padding: 1.563em;
-    background: $dark-ash-blue;
-    background: -webkit-linear-gradient(left,$blue-black 0%,$light-blue-black 10%,$ash-green 90%,$dark-ash-blue 100%);
-    background: -o-linear-gradient(left,$blue-black 0%,$light-blue-black 10%,$ash-green 90%,$dark-ash-blue 100%);
-    background: -moz-linear-gradient(left,$blue-black 0%,$light-blue-black 10%,$ash-green 90%,$dark-ash-blue 100%);
-    background: linear-gradient(to right,$blue-black 0%,$light-blue-black 10%,$ash-green 90%,$dark-ash-blue 100%);
-    position: sticky;
-    width: 100%;
-    transition: top .2s ease;
-    z-index: 1;
+  padding: 1.563em;
+  background: $dark-ash-blue;
+  background: -webkit-linear-gradient(
+    left,
+    $blue-black 0%,
+    $light-blue-black 10%,
+    $ash-green 90%,
+    $dark-ash-blue 100%
+  );
+  background: -o-linear-gradient(
+    left,
+    $blue-black 0%,
+    $light-blue-black 10%,
+    $ash-green 90%,
+    $dark-ash-blue 100%
+  );
+  background: -moz-linear-gradient(
+    left,
+    $blue-black 0%,
+    $light-blue-black 10%,
+    $ash-green 90%,
+    $dark-ash-blue 100%
+  );
+  background: linear-gradient(
+    to right,
+    $blue-black 0%,
+    $light-blue-black 10%,
+    $ash-green 90%,
+    $dark-ash-blue 100%
+  );
+  position: sticky;
+  width: 100%;
+  transition: top 0.2s ease;
+  z-index: 1;
 }
 .page-title {
-    font-size: 26pt;
-    color: $white;
+  font-size: 26pt;
+  color: $white;
 }
 .primary-btn {
-    min-height: 2.500em;
-    border: 2px solid $white;
-    border-radius: 0.125em;
-    min-width: 6.250em;
-    background: transparent;
-    font-size: 16pt;
-    color: $white;
-    cursor: pointer;
+  min-height: 2.5em;
+  border: 2px solid $white;
+  border-radius: 0.125em;
+  min-width: 6.25em;
+  background: transparent;
+  font-size: 16pt;
+  color: $white;
+  cursor: pointer;
 }
 
 /** ENDS **/

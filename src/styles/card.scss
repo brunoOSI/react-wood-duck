@@ -14,7 +14,7 @@
   }
 
   .card-header {
-    border-bottom: .1rem solid $lightest-grey;
+    border-bottom: 0.1rem solid $lightest-grey;
     display: block;
     font-size: $large-font;
     overflow: hidden;
@@ -62,6 +62,6 @@
   }
 
   &.edit {
-    border-left: .7rem solid $medium-blue;
+    border-left: 0.7rem solid $medium-blue;
   }
 }

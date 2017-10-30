@@ -42,10 +42,14 @@ const TypographyStory = () => (
     </div>
     <div className="row">
       <div className="col-6 col-sm-4">
-        <span className="menu">Body 2 / Menu</span>
+        <span className="menu" style={{ fontWeight: '600' }}>
+          Body 2 / Menu
+        </span>
       </div>
       <div className="col-6 col-sm-4">
-        <span className="menu">Medium 1.5 rems</span>
+        <span className="menu" style={{ fontWeight: '600' }}>
+          Medium 1.5 rems
+        </span>
       </div>
     </div>
     <div className="row">
@@ -58,10 +62,14 @@ const TypographyStory = () => (
     </div>
     <div className="row">
       <div className="col-6 col-sm-4">
-        <div className="helper-text">Helper Text</div>
+        <div className="c-light-grey" style={{ fontSize: '1.4rem' }}>
+          Helper Text
+        </div>
       </div>
       <div className="col-6 col-sm-4">
-        <div className="helper-text">Regular 1.8 rems</div>
+        <div className="c-light-grey" style={{ fontSize: '1.4rem' }}>
+          Regular 1.4 rems
+        </div>
       </div>
     </div>
     <div className="row">

@@ -14,4 +14,4 @@ const CategoryStory = () => (
 
 storiesOf('Page Templates', module)
   .addDecorator(CenterDecorator)
-  .add('Category', CategoryStory);
+  .add('02 Category Page Template', CategoryStory);

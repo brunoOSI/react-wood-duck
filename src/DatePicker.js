@@ -37,9 +37,9 @@ DatePicker.propTypes = {
   id: PropTypes.number,
   label: PropTypes.string,
   onChange: PropTypes.func,
-  value: PropTypes,
+  value: PropTypes.any,
   placeholder: PropTypes.string,
-  type: PropTypes,
+  type: PropTypes.func,
 };
 
 export default DatePicker;

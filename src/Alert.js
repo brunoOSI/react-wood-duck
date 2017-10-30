@@ -12,6 +12,11 @@ const Alert = props => {
             <i className={faIcons} />
           </div>
           <div className="alert-text">{props.alertMessage}</div>
+          {props.alertCross && (
+            <div className="alert-cross">
+              <i className="fa fa-times" />
+            </div>
+          )}
         </div>
       </div>
     </div>
@@ -22,6 +27,10 @@ Alert.propTypes = {
   alertClassName: PropTypes.string,
   faIcon: PropTypes.string,
   alertMessage: PropTypes.string,
+  alertCross: PropTypes.bool,
 };
 
+Alert.defaultProps = {
+  alertCross: true,
+};
 export default Alert;

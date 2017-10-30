@@ -29,10 +29,14 @@ const InputComponent = props => {
             placeholder={props.placeholder}
             value={props.value}
             onChange={props.onChange}
+            disabled={props.disabled}
           />
         </label>
         {errorMessage !== '' ? (
-          <span className="error text-danger">{errorMessage}</span>
+          <span className="error text-danger">
+            <i className="fa fa-exclamation-triangle" />
+            {errorMessage}
+          </span>
         ) : (
           ''
         )}
@@ -56,5 +60,6 @@ InputComponent.propTypes = {
   placeholder: PropTypes.string,
   value: PropTypes.any,
   onChange: PropTypes.func,
+  disabled: PropTypes.bool,
 };
 export default InputComponent;

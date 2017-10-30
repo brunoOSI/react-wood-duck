@@ -1,63 +1,82 @@
 body {
-    background: $mediumdark-grey;
+  background: $mediumdark-grey;
 }
+
 .row {
-    margin-left: 0;
-    margin-right: 0;
+  margin-left: 0;
+  margin-right: 0;
 }
+
 /***
  GLOBAL HEADER STYLING
 ***/
 
 header {
-    background-color: $white;
-    text-align: center;
-    padding: 0.625em;
-    .logo {
-        color: $primary-blue;
-        font-size: 16pt;
-        text-align: left;
-        position: relative;
-        left: 0.6em;
+  background-color: $secondary-blue;
+  text-align: center;
+  .logo {
+    color: $white;
+    font-size: $medium-font;
+    text-align: left;
+    padding: $medium-spacing 0;
+    opacity: 0.87;
+
+    &:hover {
+      opacity: 1;
     }
-    ul.header-actions {
-        li {
-            list-style: none;
-            display: inline-block;
-            padding: 0 1.250em;
-            vertical-align: middle;
-        }
-        .fa {
-            color: $grey-blue;
-            font-size: 16pt;
-        }
-        .divider {
-            height: 1.563em;
-            border: 0.063em solid $primary-grey;
-            
-        }
-        .profile {
-            font-size: 16pt;
-            margin: 0;
-            text-align: left;
-            max-width: 30.625em;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            color: $grey-blue;
-        }
-        .profile-avatar {
-            font-size: 13pt;
-            border-radius: 100%;
-            border: none;
-            margin: 0;
-            background-color: $primary-blue;
-            color: $white;
-            flex: 0 0 15%;
-            padding: 0.313em;
-            text-align: center;
-            position: relative;
-            right: -0.7em;
-        }
+  }
+  a {
+    color: $white;
+    opacity: 0.87;
+
+    &:visited {
+      color: $white;
+      opacity: 1;
     }
+
+    &:hover {
+      opacity: 1;
+      color: $white;
+    }
+  }
+  ul.header-actions {
+    li {
+      list-style: none;
+      display: inline-block;
+      padding: $medium-spacing;
+      vertical-align: middle;
+    }
+    li:last-child {
+      padding-right: 0;
+    }
+    .fa {
+      color: $white;
+      font-size: $medium-font;
+      padding: 0 $small-spacing;
+    }
+    .profile {
+      font-size: $medium-font;
+      margin: 0;
+      text-align: left;
+      max-width: 30.625rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: $white;
+    }
+    .profile-avatar {
+      font-size: $medium-font;
+      border-radius: 50%;
+      width: 3rem;
+      height: 3rem;
+      border: none;
+      margin: 0;
+      background-color: $teel-blue;
+      color: $white;
+      flex: 0 0 15%;
+      padding: 0.45rem;
+      text-align: center;
+      cursor: pointer;
+    }
+  }
 }

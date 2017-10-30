@@ -30,7 +30,7 @@ describe('Global Header', function() {
     let ulElm = TestUtils.scryRenderedDOMComponentsWithTag(header, 'ul');
     expect(ulElm.length).toEqual(1);
     let liElm = TestUtils.scryRenderedDOMComponentsWithTag(header, 'li');
-    expect(liElm.length).toEqual(6);
+    expect(liElm.length).toEqual(5);
   });
 
   it('find element with class and default props', function() {

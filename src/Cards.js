@@ -17,7 +17,7 @@ const Cards = props => (
 
 Cards.propTypes = {
   cardHeaderText: PropTypes.string,
-  children: PropTypes,
+  children: PropTypes.any,
 };
 
 export default Cards;

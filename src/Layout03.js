@@ -16,6 +16,6 @@ class Layout03 extends React.Component {
     );
   }
 }
-Layout03.propTypes = { children: PropTypes };
+Layout03.propTypes = { children: PropTypes.any };
 Layout03.defaultProps = {};
 export default Layout03;

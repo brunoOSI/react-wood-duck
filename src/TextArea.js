@@ -29,7 +29,7 @@ TextArea.propTypes = {
   gridClassName: PropTypes.string,
   resize: PropTypes.bool,
   placeholder: PropTypes.string,
-  handleOnChange: PropTypes.func.isRequired,
+  handleOnChange: PropTypes.func,
 };
 
 export default TextArea;

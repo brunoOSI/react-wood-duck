@@ -1,71 +1,60 @@
 /////////////////////////////////////////
-
 // - Font Families - //
-
 /////////////////////////////////////////
-
-$font-family: 'Source Sans Pro', 'Helvetica Neue', 'Helvetica', 'Roboto', 'Arial', sans-serif;
-$code-font-family: 'Source Code Pro', Consolas, Monaco, 'Andale Mono', monospace;
-$icon-font-family: 'FontAwesome';
-
+$font-family: ‘Source Sans Pro’, ‘Helvetica Neue’, ‘Helvetica’, ‘Roboto’,
+  ‘Arial’, sans-serif;
+$code-font-family: ‘Source Code Pro’, Consolas, Monaco, ‘Andale Mono’, monospace;
+$icon-font-family: ‘FontAwesome’;
 /////////////////////////////////////////
-
 // - Font Weights - //
-
 /////////////////////////////////////////
-
 $extralight-weight: 200;
 $light-weight: 300;
 $normal-weight: 400;
 $semibold-weight: 600;
 $bold-weight: 700;
-
 /////////////////////////////////////////
-
 // - Font Sizes - //
-
 /////////////////////////////////////////
-
-$small-font: 1.5rem;
-$base-font: 1.7rem;
+$small-font: 0.75rem;
+$base-font: 1.5rem;
+$medium-font: 1.5rem;
+$mediumplus-font: 2rem;
 $large-font: 2.4rem;
 $larger-font: 3rem;
 $largest-font: 4rem;
-
 /////////////////////////////////////////
-
 // - Spacing - //
-
 /////////////////////////////////////////
-
 $base-spacing: 1.5rem;
+$extra-small-spacing: 0.5rem;
+$small-spacing: 0.75rem;
+$smallplus-spacing: 1rem;
+$medium-spacing: 1.5rem;
+$medium-plus-spacing: 2rem;
+$large-spacing: 3rem;
 $half-spacing: $base-spacing / 2;
 $double-spacing: $base-spacing * 2;
 
 /////////////////////////////////////////
-
-// - Border Width - //
-
+// - Width - //
 /////////////////////////////////////////
-
+$extra-small-width: 0.1rem;
+$small-width: 0.5rem;
+$double-width: 6rem;
+/////////////////////////////////////////
+// - Border Width - //
+/////////////////////////////////////////
 $thin-border: 0.1rem;
 $regular-border: 0.2rem;
-
 /////////////////////////////////////////
-
 // - Border Radius - //
-
 /////////////////////////////////////////
-
 $base-border-radius: 0.2rem;
 $small-border-radius: $base-border-radius / 2;
-
 /////////////////////////////////////////
-
 // - Special Borders - //
-
 /////////////////////////////////////////
-
 %error-border {
   border: $base-border-radius solid $red;
   width: calc(100% +1.9rem);

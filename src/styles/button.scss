@@ -9,84 +9,89 @@
   -webkit-appearance: none;
   appearance: none;
   border: 0;
-  border-radius: 10rem;
   cursor: pointer;
   display: inline-block;
   font-family: $font-family;
-  font-size: 1.7rem;
+  font-size: $medium-font;
   -webkit-font-smoothing: antialiased;
   font-weight: $bold-weight;
   line-height: 1;
   outline: none;
-  padding: 1rem 2rem;
+  padding: $medium-spacing 3rem;
   text-align: center;
   text-decoration: none;
+  word-spacing: nowrap;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
 
   &.btn-default {
     background-color: transparent;
-    box-shadow: inset 0 0 0 $base-border-radius $dark-grey;
-    color: $dark-grey;
+    box-shadow: inset 0 0 0 $base-border-radius transparent;
+    color: $teel-blue;
+    padding: $medium-spacing;
   }
 
   &.btn-default:hover {
     background-color: transparent;
-    box-shadow: inset 0 0 0 $base-border-radius $darkest-grey;
-    color: $darkest-grey;
+    color: $dark-teel-blue;
+    padding: $medium-spacing;
+    text-decoration: underline;
   }
 
   &.btn-default:focus {
-    box-shadow: inset 0 0 0 $base-border-radius $dark-blue, 0 0 0.3rem $medium-blue, 0 0 0.7rem $medium-blue;
-    color: $darkest-grey;
+    box-shadow: inset 0 0 0 $base-border-radius $dark-blue,
+      0 0 0.3rem $medium-blue, 0 0 0.7rem $medium-blue;
+    color: $dark-teel-blue;
   }
 
   &.btn-default:active {
     background-color: transparent;
     box-shadow: inset 0 0 0 $base-border-radius $darkest-grey;
-    color: $darkest-grey;
+    color: $dark-teel-blue;
   }
 
   &.btn-primary {
-    background-color: transparent;
-    box-shadow: inset 0 0 0 $base-border-radius $medium-blue;
-    color: $medium-blue;
+    background-color: $teel-blue;
+    box-shadow: inset 0 0 0 $base-border-radius $teel-blue;
+    color: $white;
   }
 
   &.btn-primary:hover {
-    background-color: transparent;
-    box-shadow: inset 0 0 0 $base-border-radius $dark-blue;
-    color: $dark-blue;
+    background-color: $dark-teel-blue;
+    box-shadow: inset 0 0 0 $base-border-radius $dark-teel-blue;
+    color: $white;
   }
 
   &.btn-primary:focus {
-    box-shadow: inset 0 0 0 $base-border-radius $dark-blue, 0 0 0.3rem $medium-blue, 0 0 0.7rem $medium-blue;
-    color: $dark-blue;
+    box-shadow: inset 0 0 0 $base-border-radius $dark-blue,
+      0 0 0.3rem $medium-blue, 0 0 0.7rem $medium-blue;
+    color: $white;
   }
-
   &.btn-primary:active {
-    background-color: transparent;
+    background-color: $dark-teel-blue;
     box-shadow: inset 0 0 0 $base-border-radius $dark-blue;
-    color: $dark-blue;
+    color: $white;
   }
 
   &.btn-warning {
-    background-color: transparent;
-    box-shadow: inset 0 0 0 $base-border-radius $red;
-    color: $red;
+    background-color: $error-red;
+    box-shadow: inset 0 0 0 $base-border-radius $error-red;
+    color: $white;
   }
 
   &.btn-warning:hover {
-    background-color: $red;
+    background-color: $dark-red;
     color: $white;
   }
 
   &.btn-warning:focus {
-    background-color: $red;
+    background-color: $dark-red;
     box-shadow: 0 0 0.3rem $medium-blue, 0 0 0.7rem $medium-blue;
     color: $white;
   }
 
   &.btn-warning:active {
-    background-color: $red;
+    background-color: $dark-red;
     color: $white;
   }
 }
@@ -97,18 +102,17 @@
   }
 }
 
-.btn:disabled:hover, {
-  background-color: $light-grey;
-  border: 0;
+.btn:disabled:hover {
+  background-color: $disabled-grey;
   box-shadow: none;
-  color: $medium-grey;
+  color: $white;
   cursor: not-allowed;
+  text-decoration: none;
 }
 
 .btn:disabled {
-  background-color: $light-grey;
-  border: 0;
-  box-shadow: none;
-  color: $medium-grey;
+  background-color: $disabled-grey;
+  box-shadow: inset 0 0 0 $base-border-radius $disabled-grey;
+  color: $white;
   cursor: not-allowed;
 }
