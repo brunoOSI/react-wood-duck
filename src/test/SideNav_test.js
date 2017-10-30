@@ -79,20 +79,13 @@ describe('Side Nav', function() {
   });
 
   it('returns side nav element with default column width when columnWidth is not provided', function() {
-    renderer.render(
-      <SideNav content={simpleNavLinks} />
-    );
+    renderer.render(<SideNav content={simpleNavLinks} />);
     const resultTag = renderer.getRenderOutput();
     expect(resultTag.props.className).toContain('col-md-3');
   });
 
   it('returns side nav element with specified column width', function() {
-    renderer.render(
-      <SideNav
-        content={simpleNavLinks}
-        columnWidth={4}
-      />
-    );
+    renderer.render(<SideNav content={simpleNavLinks} columnWidth={4} />);
     const resultTag = renderer.getRenderOutput();
     expect(resultTag.props.className).toContain('col-md-4');
   });

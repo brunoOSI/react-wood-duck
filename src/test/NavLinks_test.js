@@ -4,56 +4,54 @@ import NavLink from '../NavLink';
 import NavLinks from '../NavLinks';
 
 describe('NavLinks', function() {
-  const simpleNavLinks =
-    [
-      {
-        type: 'navLink',
-        text: 'Tommy Cambell',
-        href: '#tm',
-        preIcon: 'fa fa-user',
-      },
-      {
-        type: 'navLink',
-        text: 'Aubrey Cambell',
-        href: '#au',
-        preIcon: 'fa fa-user',
-      }
-    ];
-  const navLinksWithSubNavLinks =
-    [
-      {
-        type: 'navLink',
-        text: 'Screener Summary',
-        href: '#summary',
-        className: '',
-      },
-      {
-        type: 'navLinkWithInnerNav',
-        text: 'People & Roles',
-        href: '#ppl',
-        navItems: [
-          {
-            type: 'navLink',
-            text: 'Tommy Cambell',
-            href: '#tom',
-            preIcon: 'fa fa-user',
-            postIcon: 'fa fa-exclamation-triangle c-red',
-          },
-          {
-            type: 'navLink',
-            text: 'Aubrey Cambell',
-            href: '#aub',
-            preIcon: 'fa fa-user',
-          },
-          {
-            type: 'navLink',
-            text: 'Chris Cambell',
-            href: '#chr',
-            preIcon: 'fa fa-user',
-          },
-        ],
-      },
-    ];
+  const simpleNavLinks = [
+    {
+      type: 'navLink',
+      text: 'Tommy Cambell',
+      href: '#tm',
+      preIcon: 'fa fa-user',
+    },
+    {
+      type: 'navLink',
+      text: 'Aubrey Cambell',
+      href: '#au',
+      preIcon: 'fa fa-user',
+    },
+  ];
+  const navLinksWithSubNavLinks = [
+    {
+      type: 'navLink',
+      text: 'Screener Summary',
+      href: '#summary',
+      className: '',
+    },
+    {
+      type: 'navLinkWithInnerNav',
+      text: 'People & Roles',
+      href: '#ppl',
+      navItems: [
+        {
+          type: 'navLink',
+          text: 'Tommy Cambell',
+          href: '#tom',
+          preIcon: 'fa fa-user',
+          postIcon: 'fa fa-exclamation-triangle c-red',
+        },
+        {
+          type: 'navLink',
+          text: 'Aubrey Cambell',
+          href: '#aub',
+          preIcon: 'fa fa-user',
+        },
+        {
+          type: 'navLink',
+          text: 'Chris Cambell',
+          href: '#chr',
+          preIcon: 'fa fa-user',
+        },
+      ],
+    },
+  ];
   const renderer = ReactTestUtils.createRenderer();
   const nullNavLinksComponent = renderer.render(<NavLinks navLinks={[]} />);
   var clickHandler = function() {

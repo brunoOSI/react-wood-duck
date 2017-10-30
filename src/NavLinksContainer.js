@@ -10,8 +10,7 @@ class NavLinksContainer extends React.Component {
   }
 
   getDefaultActiveNavLinkHref() {
-    return this.props.navLinks &&
-      this.props.navLinks.length > 0
+    return this.props.navLinks && this.props.navLinks.length > 0
       ? this.props.navLinks[0].href
       : null;
   }
@@ -21,7 +20,7 @@ class NavLinksContainer extends React.Component {
   }
 
   render() {
-    const {navLinks} = this.props;
+    const { navLinks } = this.props;
     return (
       <NavLinks
         navLinks={navLinks}

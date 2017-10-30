@@ -4,16 +4,16 @@ import NavLink from './NavLink';
 
 class NavLinks extends React.Component {
   render() {
-    const {navLinks, indentationLevel, activeNavLinkHref, handleClick } = this.props;
-    if (
-      !navLinks ||
-      navLinks.length === 0
-    ) {
+    const {
+      navLinks,
+      indentationLevel,
+      activeNavLinkHref,
+      handleClick,
+    } = this.props;
+    if (!navLinks || navLinks.length === 0) {
       return null;
     }
-    const navLinksComponentsList = navLinks.map(function(
-      currentNavLink
-    ) {
+    const navLinksComponentsList = navLinks.map(function(currentNavLink) {
       const navLinkProps = {
         text: currentNavLink.text,
         href: currentNavLink.href,
@@ -37,8 +37,7 @@ class NavLinks extends React.Component {
           {navLinkChildren}
         </NavLink>
       );
-    },
-    this);
+    }, this);
     return <ul className="nav nav-stacked">{navLinksComponentsList}</ul>;
   }
 }
