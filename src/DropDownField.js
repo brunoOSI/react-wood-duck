@@ -7,6 +7,7 @@ const DropDownField = props => (
       <label>{props.label}</label>
       <select
         name={props.name}
+        id={props.id}
         value={props.selectedOption}
         onChange={props.onChange}
         onBlur={props.onChange}
@@ -28,6 +29,7 @@ const DropDownField = props => (
 
 DropDownField.propTypes = {
   name: PropTypes.string.isRequired,
+  id: PropTypes.string,
   options: PropTypes.array.isRequired,
   selectedOption: PropTypes.string,
   onChange: PropTypes.func.isRequired,
