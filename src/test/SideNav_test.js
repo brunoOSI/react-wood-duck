@@ -30,7 +30,7 @@ describe('Side Nav', function() {
     },
   ];
   const renderer = TestUtils.createRenderer();
-  var sideNavWithnavigationLinksresultTag = null;
+  let sideNavWithnavigationLinksresultTag = null;
 
   beforeEach(function() {
     renderer.render(<SideNav content={simpleNavLinks} />);
@@ -38,7 +38,6 @@ describe('Side Nav', function() {
   });
 
   it('returns side nav element given valid content', function() {
-    expect(sideNavWithnavigationLinksresultTag).not.toBe(null);
     expect(sideNavWithnavigationLinksresultTag.type).toBe('div');
     expect(sideNavWithnavigationLinksresultTag.props.className).toBe(
       'container hidden-xs col-md-3 side-nav'
@@ -49,7 +48,6 @@ describe('Side Nav', function() {
   });
 
   it('returns side nav element with a bunch of navigation links given content with navigation links details', function() {
-    expect(sideNavWithnavigationLinksresultTag).not.toBe(null);
     expect(sideNavWithnavigationLinksresultTag.props.children.length).toBe(1);
     expect(sideNavWithnavigationLinksresultTag.props.children[0].type).toBe(
       'div'
