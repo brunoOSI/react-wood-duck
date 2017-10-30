@@ -16,7 +16,7 @@ const DropDownField = props => (
         <option value="">{props.placeholder}</option>
         {props.options.map(opt => {
           return (
-            <option key={opt.id} value={opt.value}>
+            <option key={opt.id} value={opt.id}>
               {opt.value}
             </option>
           );
