@@ -31,7 +31,7 @@ class Layout03 extends React.Component {
         ],
       },
     ];
-    const sideNavColumnWidth = 2;
+    const sideNavColumnWidth = 3;
     return (
       <div>
         <GlobalHeader />
