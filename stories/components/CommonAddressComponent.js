@@ -56,7 +56,7 @@ const CommonAddressComponentStory = () => (
     suggestions={[]}
     stateTypes={stateTypes.items}
     addressFields={addressFields}
-    onChange={onChange}
+    onChange={onChange()}
     onSuggestionsFetchRequested={event => {}}
     onSuggestionSelected={() => {}}
   />

@@ -46,7 +46,7 @@ const InputComponent = props => {
 };
 
 InputComponent.propTypes = {
-  id: PropTypes.number,
+  id: PropTypes.string,
   labelClassName: PropTypes.string,
   required: PropTypes.bool,
   validationError: PropTypes.bool,
