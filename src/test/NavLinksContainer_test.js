@@ -11,47 +11,46 @@ describe('NavLinksContainer', function() {
     const resultTag = renderer.getRenderOutput();
 
     it('renders NavLinks Component', function() {
-        expect(resultTag.type).toBe(NavLinks);
+      expect(resultTag.type).toBe(NavLinks);
     });
 
     it('renders NavLinks component with empty navLinks property', function() {
-        expect(resultTag.props.navLinks).toEqual(emptyNavLinks);
+      expect(resultTag.props.navLinks).toEqual(emptyNavLinks);
     });
 
     it('renders NavLinks component with null activeNavLinkHref', function() {
-        expect(resultTag.props.activeNavLinkHref).toBe(null);
+      expect(resultTag.props.activeNavLinkHref).toBe(null);
     });
   });
 
   describe('given navigation links', function() {
     let renderer = TestUtils.createRenderer();
-    const simpleNavLinks =
-    [   
-        { 
-          type: 'navLink',
-          text: 'Tommy Cambell',
-          href: '#tommy',
-          preIcon: 'fa fa-user',
-        },
-        { 
-          type: 'navLink',
-          text: 'Aubrey Cambell',
-          href: '#aub',
-          preIcon: 'fa fa-user',
-        },
-        { 
-          type: 'navLink',
-          text: 'Chris Cambell',
-          href: '#chris',
-          preIcon: 'fa fa-user',
-        },
+    const simpleNavLinks = [
+      {
+        type: 'navLink',
+        text: 'Tommy Cambell',
+        href: '#tommy',
+        preIcon: 'fa fa-user',
+      },
+      {
+        type: 'navLink',
+        text: 'Aubrey Cambell',
+        href: '#aub',
+        preIcon: 'fa fa-user',
+      },
+      {
+        type: 'navLink',
+        text: 'Chris Cambell',
+        href: '#chris',
+        preIcon: 'fa fa-user',
+      },
     ];
     renderer.render(<NavLinksContainer navLinks={simpleNavLinks} />);
     const resultTag = renderer.getRenderOutput();
 
     it('renders NavLinks component with give navLinks property', function() {
-        expect(resultTag.type).toBe(NavLinks);
-        expect(resultTag.props.navLinks).toEqual(simpleNavLinks);
+      expect(resultTag.type).toBe(NavLinks);
+      expect(resultTag.props.navLinks).toEqual(simpleNavLinks);
     });
 
     it('renders NavLinks component with first NavLink as active NavLink', function() {
@@ -62,5 +61,4 @@ describe('NavLinksContainer', function() {
       expect(resultTag.props.handleClick).toBeTruthy();
     });
   });
-
 });
