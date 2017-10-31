@@ -1,16 +1,16 @@
-.navlink {
+li.navlink {
    font-size: 1.4rem;
    a {
-      text-decoration:none !important;
-      color: black !important;
-      display: inline-block !important;
+      text-decoration:none;
+      color: black;
+      display: inline-block;
    }
    a:focus, a:hover, a.active {
-      color: #17486a !important;
-      background-color: transparent !important;
-      box-shadow: none !important;
-      border-color: transparent !important;
-      font-weight: bold !important;
+      color: #17486a;
+      background-color: transparent;
+      box-shadow: none;
+      border-color: transparent;
+      font-weight: bold;
    }
 } 
 
