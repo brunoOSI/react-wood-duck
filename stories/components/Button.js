@@ -74,26 +74,34 @@ const ButtonStory = withInfo(
 )(() => (
   <ButtonContainer>
     <div className="row" style={styles}>
-      <div className="col-lg-6 text-center">
+      <div className="col-sm-6 text-center">
+        <h3>Default Buttons</h3>
+      </div>
+      <div className="col-sm-6 text-center">
+        <h3>Disabled Buttons</h3>
+      </div>
+    </div>
+    <div className="row" style={styles}>
+      <div className="col-sm-6 text-center">
         <Button btnClassName="primary" btnName="Primary" />
       </div>
-      <div className="col-lg-6 text-center">
+      <div className="col-sm-6 text-center">
         <Button btnClassName="primary" btnName="Primary" disabled={true} />
       </div>
     </div>
     <div className="row" style={styles}>
-      <div className="col-lg-6 text-center">
+      <div className="col-sm-6 text-center">
         <Button btnClassName="default" btnName="Secondary" />
       </div>
-      <div className="col-lg-6 text-center">
+      <div className="col-sm-6 text-center">
         <Button btnClassName="default" btnName="Secondary" disabled={true} />
       </div>
     </div>
     <div className="row" style={styles}>
-      <div className="col-lg-6 text-center">
+      <div className="col-sm-6 text-center">
         <Button btnClassName="warning" btnName="Warning" />
       </div>
-      <div className="col-lg-6 text-center">
+      <div className="col-sm-6 text-center">
         <Button btnClassName="warning" btnName="Warning" disabled={true} />
       </div>
     </div>

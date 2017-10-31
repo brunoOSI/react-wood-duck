@@ -48,6 +48,7 @@ label {
   display: block;
   font-size: $medium-font;
   font-weight: $normal-weight;
+  padding-top: $medium-spacing;
 }
 
 textarea {
@@ -61,7 +62,7 @@ select {
   background-size: 1.3rem;
 }
 option {
-  padding: 1.5rem;
+  padding: $medium-spacing;
 }
 
 legend {

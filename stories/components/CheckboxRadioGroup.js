@@ -5,11 +5,8 @@ import { withInfo } from '@storybook/addon-info';
 
 import CheckboxRadioGroup from '../../src/CheckboxRadioGroup';
 
-const styles = { paddingTop: '20px', width: '750px' };
 const CenterDecorator = storyFn => (
-  <div className="container" style={styles}>
-    {storyFn()}
-  </div>
+  <div className="container-fluid">{storyFn()}</div>
 );
 let data = ['Sojourner Truth', 'Frederick Douglass', 'Booker T. Washington'];
 
@@ -88,22 +85,30 @@ const CheckboxRadioGroupStory = withInfo(
   `
 )(() => (
   <div>
-    <CheckboxRadioGroup
-      label="Characters"
-      type={'checkbox'}
-      name="Category"
-      options={data}
-      selectedOptions={[]}
-      handleOnChange={e => this.setSate({ value: e.target.value })}
-    />
-    <CheckboxRadioGroup
-      label="Characters"
-      type={'radio'}
-      name="Category"
-      options={data}
-      selectedOptions={[]}
-      handleOnChange={e => this.setSate({ value: e.target.value })}
-    />
+    <div className="row">
+      <div className="col-lg-6">
+        <h3>Check Box Group</h3>
+        <CheckboxRadioGroup
+          label="Characters"
+          type={'checkbox'}
+          name="Category"
+          options={data}
+          selectedOptions={[]}
+          handleOnChange={e => this.setSate({ value: e.target.value })}
+        />
+      </div>
+      <div className="col-lg-6">
+        <h3>Radio Button</h3>
+        <CheckboxRadioGroup
+          label="Characters"
+          type={'radio'}
+          name="Category"
+          options={data}
+          selectedOptions={[]}
+          handleOnChange={e => this.setSate({ value: e.target.value })}
+        />
+      </div>
+    </div>
   </div>
 ));
 

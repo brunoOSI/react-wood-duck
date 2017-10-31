@@ -172,7 +172,7 @@ show some documentation on your components. It shows the component's code and pr
 
 After writing your story, import your story at index.js
 
-	import NewComponent from './components/NewComponent';
+	import from './components/NewComponent';
 
 Run your storybook with:
 	

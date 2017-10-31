@@ -6,7 +6,7 @@ const CenterDecorator = storyFn => (
 );
 const GridStory = () => (
   <div>
-    <h1>Icons</h1>
+    <h1>Grid</h1>
     <p>
       We are currently using Bootstrap grid system, which is based on a 12
       column layout and is fully responsive.

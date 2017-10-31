@@ -36,4 +36,3 @@ import './components/TextArea';
 import './page-templates/LandingPageTemplate';
 import './page-templates/Category';
 import './page-templates/DetailPageTemplate';
-import './page-templates/LandingWorkOverview';
